@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import Routes from './Routes/Routes';
 
 function App() {
 	return (
-		<div className='App'>
-			<h1>Vishal's Branch</h1>
+		<div>
+			<Routes />
 		</div>
 	);
 }
