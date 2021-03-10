@@ -8,3 +8,8 @@
   color: grey;
   font-size: small;
 }
+
+.advertiseBox button {
+ border-radius: 45%;
+ border: none;
+}

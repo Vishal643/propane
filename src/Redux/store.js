@@ -1,27 +1,15 @@
 import {applyMiddleware, compose, combineReducers,createStore} from 'redux'
-import {reducer} from './TopContent/reducer'
+import {reducer as topreducer} from './TopContent/reducer'
+import {reducer as advreducer} from './Advertisement/reducer'
 
 import  thunk from 'redux-thunk'
 
 const rootReducer = combineReducers({
-    TopContent: reducer,
-   
+    TopContent: topreducer,
+    Advertisement: advreducer
 });
 
-const logger = (store) => (next) => (action) => {
-    console.log("dispatching some action", action, store.getState())
-    const val = next(action)
-    console.log("state now is", store.getState());
-    return val;
-}
 
-
-const customMiddleware = (store) => (next) => (action) => {
-    if(typeof action === "function") {
-        return action(store.dispatch,store.getState);
-    }
-    return next(action);
-}
 
 
 const composeEnhancers = 
@@ -33,4 +21,3 @@ const composeEnhancers =
 export const store = createStore(rootReducer,enhancer);
 
 
-console.log(store.getState())
