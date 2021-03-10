@@ -3,7 +3,10 @@
 	height: 40px;
 	display: flex;
 	font-family: Montserrat, Verdana, arial, sans-serif;
-	/* position: absolute; */
+	font-size: 12px;
+	width: fit-content;
+	margin-left: 90px;
+	margin-right: 100px;
 }
 
 .select_tab {
@@ -28,7 +31,7 @@
 .show_time {
 	border-left: 1px solid lightgray;
 	border-right: 1px solid lightgray;
-	padding: 5px;
+	padding: 3px;
 }
 .show_time > p {
 	color: black;
@@ -38,7 +41,7 @@
 
 .show_temp {
 	border-right: 1px solid lightgray;
-	padding: 5px;
+	padding: 3px;
 }
 .show_temp > p {
 	color: black;
@@ -69,14 +72,15 @@
 }
 
 .select_tab .times_of_india_img {
-	margin-left: 0px;
+	margin-left: 100px;
 	height: fit-content;
 	display: flex;
 	width: fit-content;
 }
 
 .times_of_india_img > img {
-	margin-left: 0px;
+	text-align: center;
+
 	height: 100px;
 	width: fit-content;
 	max-width: 100%;

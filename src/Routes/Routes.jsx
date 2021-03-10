@@ -1,20 +1,23 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomePageHeader from '../Components/HomePageHeader';
+import HomePage from '../Components/HomePage';
+import TechPage from '../Components/TechPage';
 
 const Routes = () => {
 	return (
 		<div>
-			<HomePageHeader />
 			<Switch>
 				<Route path='/' exact>
-					Home Page
+					<HomePage />
 				</Route>
 				<Route path='/business' exact>
 					Business Page
 				</Route>
 				<Route path='/tech' exact>
-					Tech Page
+					<TechPage />
+				</Route>
+				<Route path='/tech/:id' exact>
+					You are viewing single news
 				</Route>
 				<Route>
 					<h1>Page not found?</h1>

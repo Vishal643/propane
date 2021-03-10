@@ -9,27 +9,25 @@ import {
 	BiRss,
 	IoMdNotificationsOutline,
 } from 'react-icons/all';
-const HomePageHeader = () => {
+
+const HomePageHeader = ({ src, alt, extras, links, style, handleChange }) => {
+	let date = new Date();
 	return (
 		<div>
 			<div className={styles.top_heading}>
 				<div className={styles.select_tab}>
 					<label htmlFor='country_select'>EDITION</label>
-					<select className={styles.select} name='country_select'>
-						<option value='IN'>
-							{/* {' '} */}
-							{/* <img
-								className={styles.flag}
-								src='https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg'
-								alt='indian_flag'
-							/> */}
-							IN
-						</option>
-						<option value='US'>US</option>
+					<select
+						onChange={(e) => handleChange(e.target.value)}
+						className={styles.select}
+						name='country_select'
+					>
+						<option value='indian_tech_news'>IN</option>
+						<option value='us_tech_news'>US</option>
 					</select>
 				</div>
 				<div className={styles.show_time}>
-					<p>TUE, MAR 09, 2021 | UPDATED 02.09PM IST</p>
+					<p>{date.toDateString()}</p>
 				</div>
 				<div className={styles.show_temp}>
 					<p>PATNA 29°C</p>
@@ -56,12 +54,9 @@ const HomePageHeader = () => {
 				</div>
 			</div>
 			<div className={styles.times_of_india_img}>
-				<img
-					src='https://static.toiimg.com/photo/79638690.cms'
-					alt='the_times_of_india'
-				/>
+				<img style={style} src={src} alt={alt} />
 			</div>
-			<Navbar />
+			<Navbar links={links} extras={extras} />
 		</div>
 	);
 };
