@@ -1,0 +1,10 @@
+.advertiseBox {
+ 
+  height: 25%;
+  text-align: center;
+}
+
+.advertiseBox p {
+  color: grey;
+  font-size: small;
+}

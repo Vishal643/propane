@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+
+import styles from  './Styles/App.module.css';
+import { ExtraNewsPoints } from './Components/ExtraNewsPoints';
+import { HeaderImage } from './Components/HeaderImage';
+import { TopContent } from './Components/TopContent';
+import { VideoCard } from './Components/VideoCard';
+import { AdvertiseRight } from './Components/AdvertiseRight';
+import { TopAdverRedBox } from './Components/TopAdverRedBox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+            <TopAdverRedBox/>
+      </div>
+      <div className={styles.Maindiv}>
+        <div className={styles.Maindiv__left}>
+              <HeaderImage/>
+              <TopContent/>
+          </div>
+          <div className={styles.Maindiv__middle}>
+              <VideoCard/>
+          </div>
+          <div className={styles.Maindiv__right}>
+                <AdvertiseRight/>
+                <ExtraNewsPoints/>
+          </div>
+      </div>
+    </>
   );
 }
 
