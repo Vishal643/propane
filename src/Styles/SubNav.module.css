@@ -1,0 +1,49 @@
+.subnav_wrapper{
+    background-color:#0270DF;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: -1px auto;
+    height: 30px;
+    justify-content:space-between ;
+   
+}
+
+.subnav_wrapper>div:nth-of-type(1){
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -10px;
+    padding-left: 3%;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subnav_wrapper>div:nth-of-type(1)>p a{
+    color: white;
+    text-decoration: none;
+}
+
+.subnav_wrapper>div:nth-of-type(1)>p:hover, .subnav_wrapper>div:nth-of-type(1)>p a:hover{
+    background-color: white;
+    color: black;
+}
+
+.subnav_wrapper>div:nth-of-type(2){
+    padding-right: 0.5%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -15px;
+
+}
+
+.subnav_subhead{
+    width: 80%;
+    margin: 0px auto;
+    height: 25px;
+    font-size: 12px;
+    padding-top: 0.5%;
+    box-shadow: 0px 0px 20px 0px black;
+}
