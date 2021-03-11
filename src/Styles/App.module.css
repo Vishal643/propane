@@ -1,0 +1,18 @@
+.Maindiv {
+  display: flex;
+
+}
+
+.Maindiv__left {
+  border-right: 1px dotted grey;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 7%;
+}
+
+.Maindiv__middle {
+  margin-left: 2%;
+  width: 13%;
+  border-right: 1px dotted grey;
+}

@@ -237,7 +237,7 @@ const TechPage = () => {
 					))
 				)}
 			</div>
-			<Comment />
+			{/* <Comment /> */}
 		</>
 	);
 };

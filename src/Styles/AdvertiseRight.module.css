@@ -1,0 +1,15 @@
+.advertiseBox {
+ 
+  height: 25%;
+  text-align: center;
+}
+
+.advertiseBox p {
+  color: grey;
+  font-size: small;
+}
+
+.advertiseBox button {
+ border-radius: 45%;
+ border: none;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { CarouselContainer } from '../footerPage/Carousel';
 import GridFooter from '../footerPage/GridFooter';
+import AllImports from '../AllImports';
 import HomePageHeader from './HomePageHeader';
 const links = [
 	{
@@ -74,6 +75,7 @@ const HomePage = () => {
 				extras={extras}
 				links={links}
 			/>
+			<AllImports />
 			<CarouselContainer />
 			<GridFooter />
 		</>
