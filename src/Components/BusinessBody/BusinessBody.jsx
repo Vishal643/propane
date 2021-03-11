@@ -56,8 +56,10 @@ const BusinessBody = () => {
 					</div>
 				</div>
 			</div>
-			<IndiaBusiness />
-			<InternationalBusiness />
+			<IndiaBusiness/>
+			<InternationalBusiness/>
+			
+			
 		</>
 	);
 };
