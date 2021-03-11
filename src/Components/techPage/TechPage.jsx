@@ -5,7 +5,7 @@ import { BsChevronRight } from 'react-icons/all';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { getTechNews } from '../../Redux/techPage/actions';
-import Comment from './Comment';
+// import Comment from './Comment';
 
 //Links and styles
 const links = [
