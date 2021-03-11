@@ -4,11 +4,19 @@ import styles from '../../Styles/TechPage.module.css';
 import { BsChevronRight } from 'react-icons/all';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
-import { getTechNews } from '../../Redux/techPage/actions';
+import {
+	getTechNews,
+	getIndivisualNewsData,
+} from '../../Redux/techPage/actions';
+import { AdvertiseRight } from '../Advertisment/AdvertiseRight';
 // import Comment from './Comment';
 
 //Links and styles
 const links = [
+	{
+		to: '/',
+		title: 'Home',
+	},
 	{
 		to: '/news',
 		title: 'NEWS',
@@ -63,6 +71,7 @@ const TechPage = () => {
 	}, [query, dispatch]);
 
 	const seeIndivisualNews = (id) => {
+		dispatch(getIndivisualNewsData(query, id));
 		history.push(`/tech/${id}`);
 	};
 	return isLoading ? (
@@ -129,14 +138,9 @@ const TechPage = () => {
 					</div>
 					<div>
 						<div className={styles.ad_div}>
-							<span>
-								<p>ADVERTISMENT</p>
-							</span>
-							<img
-								src='https://tpc.googlesyndication.com/simgad/14814462679598023600?'
-								alt='ad'
-							/>
+							<AdvertiseRight />
 						</div>
+
 						<div className={styles.select_div}>
 							<select name='Select Category'>
 								{[
@@ -216,7 +220,7 @@ const TechPage = () => {
 			</div>
 
 			<h2 className={styles.tech_news}>
-				Tech News{' '}
+				Tech News
 				<BsChevronRight style={{ fontSize: '20px', fontWeight: 'bold' }} />
 			</h2>
 			<div className={styles.tech_news_div}>
@@ -229,7 +233,7 @@ const TechPage = () => {
 						>
 							<img
 								className={styles.tech_news_img}
-								src={item.img_src}
+								src={item.image_link}
 								alt='tech_news'
 							/>
 							<p className={style.tech_news_desc}>{item.description}</p>

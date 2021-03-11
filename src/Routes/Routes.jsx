@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from '../Components/header/HomePage';
 import TechPage from '../Components/techPage/TechPage';
+import { IndividualTechNews } from '../Components/techPage/IndivisualTechNews';
 import { shallowEqual, useSelector } from 'react-redux';
 import { IndiaBusiness } from '../Components/BusinessBody/IndiaBusiness';
 import { IndividualNews } from '../Components/BusinessBody/IndividualNews';
@@ -12,6 +13,10 @@ import { NavbarBusiness } from '../Components/NavbarBusiness/NavbarBusiness';
 const Routes = () => {
 	const { businessData, businessIndia, economyNews } = useSelector(
 		(state) => state.business,
+		shallowEqual
+	);
+	const { indivisualNews } = useSelector(
+		(state) => state.techReducer,
 		shallowEqual
 	);
 	const { searchArray } = useSelector((state) => state.search, shallowEqual);
@@ -28,7 +33,7 @@ const Routes = () => {
 					<TechPage />
 				</Route>
 				<Route path='/tech/:id' exact>
-					You are viewing single news
+					<IndividualTechNews data={indivisualNews} />
 				</Route>
 				<Route path='/business/india-business' exact>
 					<IndiaBusiness />

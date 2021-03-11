@@ -72,7 +72,6 @@ const SubNav = () => {
 					<p>GST</p>
 					<p>Budget</p>
 					<p>
-						{' '}
 						<Link>Tax Calculator</Link>
 					</p>
 					<p>FAQs</p>
