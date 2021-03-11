@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import HomePageHeader from './HomePageHeader';
-import styles from '../Styles/TechPage.module.css';
+import HomePageHeader from '../header/HomePageHeader';
+import styles from '../../Styles/TechPage.module.css';
 import { BsChevronRight } from 'react-icons/all';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
-import { getTechNews } from '../Redux/techPage/actions';
+import { getTechNews } from '../../Redux/techPage/actions';
+import Comment from './Comment';
 
 //Links and styles
 const links = [
@@ -236,6 +237,7 @@ const TechPage = () => {
 					))
 				)}
 			</div>
+			<Comment />
 		</>
 	);
 };

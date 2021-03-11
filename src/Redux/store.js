@@ -1,7 +1,11 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { techPageReducer } from './techPage/techPageReducer';
-const rootReducer = combineReducers({ techReducer: techPageReducer });
+import { footerPagereducer } from './footerPage/reducer';
+const rootReducer = combineReducers({
+	techReducer: techPageReducer,
+	footerPage: footerPagereducer,
+});
 
 let composeEnhancers = compose;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineSearch, GiHamburgerMenu } from 'react-icons/all';
-import styles from '../Styles/Navbar.module.css';
+import styles from '../../Styles/Navbar.module.css';
 
 const Navbar = ({ links, extras }) => {
 	return (

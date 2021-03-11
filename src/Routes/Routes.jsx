@@ -1,7 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HomePage from '../Components/HomePage';
-import TechPage from '../Components/TechPage';
+import HomePage from '../Components/header/HomePage';
+import TechPage from '../Components/techPage/TechPage';
+import Comment from '../Components/techPage/Comment';
 
 const Routes = () => {
 	return (
@@ -18,6 +19,9 @@ const Routes = () => {
 				</Route>
 				<Route path='/tech/:id' exact>
 					You are viewing single news
+				</Route>
+				<Route exact path='/city'>
+					<Comment />
 				</Route>
 				<Route>
 					<h1>Page not found?</h1>

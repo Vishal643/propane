@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
-import styles from '../Styles/HomePageHeader.module.css';
+import styles from '../../Styles/HomePageHeader.module.css';
 import {
 	GrFacebookOption,
 	AiFillTwitterCircle,

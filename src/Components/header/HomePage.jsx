@@ -1,4 +1,6 @@
 import React from 'react';
+import { CarouselContainer } from '../footerPage/Carousel';
+import GridFooter from '../footerPage/GridFooter';
 import HomePageHeader from './HomePageHeader';
 const links = [
 	{
@@ -65,12 +67,16 @@ const links = [
 const extras = 'TOI+';
 const HomePage = () => {
 	return (
-		<HomePageHeader
-			src={`https://static.toiimg.com/photo/79638690.cms`}
-			alt={`the_times_of_india`}
-			extras={extras}
-			links={links}
-		/>
+		<>
+			<HomePageHeader
+				src={`https://static.toiimg.com/photo/79638690.cms`}
+				alt={`the_times_of_india`}
+				extras={extras}
+				links={links}
+			/>
+			<CarouselContainer />
+			<GridFooter />
+		</>
 	);
 };
 
