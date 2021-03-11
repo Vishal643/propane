@@ -1,10 +1,10 @@
 import styles from '../Styles/App.module.css';
-import { ExtraNewsPoints } from './ExtraNewsPoints';
-import { HeaderImage } from './HeaderImage';
-import { TopContent } from './TopContent';
-import { VideoCard } from './VideoCard';
+import { ExtraNewsPoints } from '../Components/relatedToHeader/ExtraNewsPoints';
+import { HeaderImage } from '../Components/relatedToHeader/HeaderImage';
+import { TopContent } from '../Components/relatedToHeader/TopContent';
+import { VideoCard } from '../Components/relatedToHeader/VideoCard';
 import { AdvertiseRight } from '../Components/Advertisment/AdsRightSide';
-import { TopAdverRedBox } from './TopAdverRedBox';
+import { TopAdverRedBox } from '../Components/relatedToHeader/TopAdverRedBox';
 
 function AllImports() {
 	return (
