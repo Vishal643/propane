@@ -2,10 +2,12 @@ import {combineReducers, createStore, applyMiddleware, compose} from "redux"
 
 import thunk from "redux-thunk";
 import { businessReducer } from "./BusinessPage/reducer";
+import { searchReducer } from "./SearchFunction/reducer";
 
 
 const rootReducer = combineReducers({
-   business : businessReducer
+   business : businessReducer,
+   search : searchReducer
 })
 
 

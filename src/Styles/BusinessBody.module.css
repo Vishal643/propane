@@ -22,6 +22,10 @@
     /* background-color: blue;  */
 }
 
+.business_news_main:hover{
+    transform: scale(1.05,1);
+}
+
 .business_news_main>p{
     position: absolute;
     color: white;
@@ -32,6 +36,7 @@
     width: 100%;
 
 }
+
 
 .business_newshead_wrapper{
     display: flex;
