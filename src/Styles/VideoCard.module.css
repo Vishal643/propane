@@ -1,0 +1,9 @@
+.videoCard div img{
+   width: 90%;
+   border-radius: 4%;
+}
+
+.videoCard div p {
+    max-width: 90%;
+    margin-top: 0px;
+}

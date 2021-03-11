@@ -1,23 +1,29 @@
-import {combineReducers, createStore, applyMiddleware, compose} from "redux"
 
-import thunk from "redux-thunk";
 import { businessReducer } from "./BusinessPage/reducer";
 import { searchReducer } from "./SearchFunction/reducer";
 
+import {applyMiddleware, compose, combineReducers,createStore} from 'redux'
+import {reducer as topreducer} from './TopContent/reducer'
+import {reducer as advreducer} from './Advertisement/reducer'
+
+import  thunk from 'redux-thunk'
 
 const rootReducer = combineReducers({
-   business : businessReducer,
-   search : searchReducer
-})
+    TopContent: topreducer,
+    Advertisement: advreducer,
+    business : businessReducer,
+    search : searchReducer
+});
 
 
 
-const composeEnhancers =
-(typeof window !== "undefined" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
+
+const composeEnhancers = 
+(typeof window !== "undefined" && 
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ) ||  compose;
+
+  const enhancer = composeEnhancers(applyMiddleware(thunk))
+
+export const store = createStore(rootReducer,enhancer);
 
 
-const enhancer = composeEnhancers( applyMiddleware(thunk) );
-
-const store = createStore(rootReducer, enhancer )
-
-export {store}

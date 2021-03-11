@@ -1,0 +1,13 @@
+.headImg div img{
+  border-radius: 1%;
+  width: 94.5%;
+  height: 300px;
+  float: left;
+}
+
+.headImg h1 {
+    float: left;
+    margin-top: -120px;
+    color: white;
+    margin-left: 30px;
+}
