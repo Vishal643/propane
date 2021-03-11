@@ -1,0 +1,167 @@
+.below_nav_ad {
+	height: 100%;
+	width: 85%;
+	margin-left: 100px;
+}
+
+.technology_container_div {
+	height: 300px;
+	width: 600px;
+	margin-left: 100px;
+}
+.top_three_cards {
+	display: flex;
+	width: 800x;
+	flex-wrap: nowrap;
+}
+.large_image {
+	height: fit-content;
+	width: 405px;
+	margin: 10px;
+	cursor: pointer;
+}
+.large_image_tag {
+	height: 400px;
+	max-width: 405x;
+	width: 400px;
+	animation-name: gracefulimage;
+	border-radius: 5px;
+}
+.large_image_tag:hover {
+	height: 405px;
+	transition: ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+}
+
+.desc {
+	padding: 20px;
+	width: 300px;
+	height: fit-content;
+	background-color: white;
+	margin-top: 0px;
+	border: 1px solid white;
+}
+.large_image_description {
+	font-weight: 600;
+	line-height: 20px;
+	margin-top: 0px;
+	background-color: white;
+	font-size: 20px;
+}
+
+.small_image_tag {
+	height: 150px;
+	width: 200px;
+	margin-top: 15px;
+	margin-left: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.small_image_tag:hover {
+	height: 152px;
+	transition: ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+}
+.small_image_description {
+	margin-left: 30px;
+	font-size: 16px;
+}
+
+.small_image_container {
+	display: flex;
+}
+
+.small_image_conatiner_below_large {
+	display: flex;
+	margin-top: 250px;
+	margin-left: 80px;
+}
+.small_image_tag_below_large {
+	height: 150px;
+	width: 200px;
+	margin-top: 15px;
+	margin-left: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.small_image_tag_below_large:hover {
+	height: 152px;
+	transition: ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+}
+.small_image_below_large {
+	width: 200px;
+	margin-left: 25px;
+}
+.small_image_description_below_large {
+	text-align: left;
+}
+
+.ad_div {
+	margin-left: 50px;
+	margin-top: 5px;
+}
+
+.ad_div > span {
+	background-color: rgb(116, 61, 61);
+	height: 20px;
+}
+
+.ad_div > span > p {
+	letter-spacing: 1ch;
+	font-size: 10px;
+	margin-left: 70px;
+}
+
+.select_div {
+	margin-left: 50px;
+	margin-top: 50px;
+	border: 1px solid lightgray;
+	padding: 20px;
+}
+.select_div select {
+	min-width: 250px;
+	min-height: 40px;
+	margin: 10px 10px;
+	font-size: 20px;
+}
+
+.select_div button {
+	margin-left: 10px;
+	height: 40px;
+	width: 250px;
+	background-color: rgb(204, 204, 204);
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: not-allowed;
+	outline: none;
+	border: 1px solid rgb(204, 204, 204);
+	border-radius: 5px;
+}
+
+.tech_news {
+	margin-left: 120px;
+}
+.tech_news_div {
+	display: flex;
+	margin-left: 100px;
+}
+
+.tech_news_card {
+	height: 150px;
+	width: 150px;
+	margin: 15px;
+}
+.tech_news_img {
+	width: 150px;
+	height: 130px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.tech_news_img:hover {
+	height: 132px;
+	transition: ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+}

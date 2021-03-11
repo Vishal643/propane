@@ -1,0 +1,38 @@
+.rec.rec-arrow {
+    /* border-radius: 0; */
+  color:black;
+    /* background-color:#bbb; */
+}
+/* round buttons on hover */
+.rec.rec-arrow:focus{
+    border-radius: 50%;
+    color:red;
+    background-color:rgb(221, 64, 64);
+}
+/* hide disabled buttons */
+.rec.rec-arrow:enabled :hover :focus{
+    visibility: visible;
+    background-color:#bbb;
+}
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+.rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px lightgrey;
+    background-color:#bbb;
+}
+
+button.rec-dot{
+    background-color:#bbb;
+    box-shadow: 0 0 1px 3px rgb(20, 20, 20);
+  }
+  
+  button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px #bbb;
+  }
+
+  /* .rec-arrow:hover, rec-arrow:active, rec-arrow:focus  {
+    box-shadow: 0 0 1px 3px #bbb;
+  } */
+
+ 

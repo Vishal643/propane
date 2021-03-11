@@ -1,0 +1,40 @@
+.link_container {
+	display: flex;
+	border-top: 1px solid black;
+	border-bottom: 2px solid black;
+	margin-bottom: 5px;
+	overflow-x: hidden;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.links {
+	font-size: 13px;
+	text-decoration: none;
+	margin: 15px 10px;
+	color: black;
+	font-family: Montserrat, Verdana, arial, sans-serif;
+}
+
+.toi_plus {
+	margin-top: 0px;
+	margin-left: 100px;
+	font-size: 15px;
+	font-weight: 600;
+}
+.toi_plus > p {
+	margin-top: 13px;
+}
+
+.search_bar_container {
+	float: right;
+	margin-top: 15px;
+	margin-left: 20px;
+	font-size: 25px;
+	font-weight: 100;
+}
+
+.search_bar_container > :last-child {
+	margin-left: 10px;
+	font-weight: 100;
+}

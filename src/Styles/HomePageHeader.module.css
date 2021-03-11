@@ -1,0 +1,88 @@
+.top_heading {
+	border-bottom: 1px solid black;
+	height: 40px;
+	display: flex;
+	font-family: Montserrat, Verdana, arial, sans-serif;
+	font-size: 12px;
+	width: fit-content;
+	margin-left: 90px;
+	margin-right: 100px;
+}
+
+.select_tab {
+	margin: 10px;
+	font-size: 12px;
+	width: 120px;
+}
+.select {
+	outline: none;
+	border: none;
+	margin-left: 10px;
+	background-color: white;
+	width: 50px;
+	box-sizing: 10px 8px 10px 8px wheat;
+	border-color: whitesmoke;
+}
+
+.flag {
+	width: 20px;
+	height: 20px;
+}
+.show_time {
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	padding: 3px;
+}
+.show_time > p {
+	color: black;
+	margin-top: 12px;
+	font-size: 12px;
+}
+
+.show_temp {
+	border-right: 1px solid lightgray;
+	padding: 3px;
+}
+.show_temp > p {
+	color: black;
+	margin-top: 12px;
+	font-size: 12px;
+}
+
+.right_content {
+	margin-left: 600px;
+	margin-top: 10px;
+}
+
+.link {
+	text-decoration: none;
+	font-size: 15px;
+	color: black;
+	font-weight: normal;
+	margin-right: 20px;
+}
+
+.social_medial_icon {
+	margin: 10px 5px;
+	font-size: 15px;
+	border: 1px solid black;
+	border-radius: 50%;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.select_tab .times_of_india_img {
+	margin-left: 100px;
+	height: fit-content;
+	display: flex;
+	width: fit-content;
+}
+
+.times_of_india_img > img {
+	text-align: center;
+
+	height: 100px;
+	width: fit-content;
+	max-width: 100%;
+	border: 0;
+}
