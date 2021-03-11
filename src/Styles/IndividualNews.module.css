@@ -1,0 +1,30 @@
+.individual_wrapper{
+    width: 80%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.individual_subWrapper{
+   
+    width: 70%;
+    margin: 0 auto;
+   
+}
+
+.individual_subWrapper>p:nth-of-type(1){
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.individual_content{
+    display: flex;
+}
+
+
+.individual_content p{
+    font-size: 16px;
+    line-height: 27px;
+    padding-left: 30px;
+
+ }
+ 
