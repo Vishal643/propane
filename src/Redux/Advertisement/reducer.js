@@ -3,7 +3,7 @@ import { GET_ADV_FAILURE, GET_ADV_REQUEST, GET_ADV_SUCCESS, GET_RANDOM} from "./
 const initState = {
     isLoading: false,
     adv: [],
-    randomArr : "",
+    randomStr : "",
     error: null
 }
 
@@ -41,7 +41,7 @@ export const reducer = (state=initState,{type,payload}) => {
             return {
                 ...state,
                 isLoading: false,
-                randomArr:payload.img
+                randomStr:payload.img
             }
         }
 

@@ -10,14 +10,14 @@ const AdvertiseRight = () => {
 
     
     const dispatch = useDispatch();
-    const{isLoading,randomArr,error} = useSelector((state) => state.Advertisement , shallowEqual);
+    const{isLoading,randomStr,error} = useSelector((state) => state.Advertisement , shallowEqual);
     
     
   
     React.useEffect(() => {
        setInterval(() => {
-            for(let i=1;i<10;i++){
-                var num = Math.floor( (Math.random() * 10)+1 );
+            for(let i=1;i<11;i++){
+                var num = Math.floor( (Math.random() * 11)+1 );
                 console.log(num)
                 dispatch(fetchAdvById(num))
             }
@@ -29,7 +29,7 @@ const AdvertiseRight = () => {
         <>
             {isLoading && <h3>...Loading</h3>}
             {error && <div>something went wrong</div>}
-            <AdvCard img={randomArr} />
+            <AdvCard img={randomStr} />
            
         </>
     )

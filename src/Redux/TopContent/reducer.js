@@ -1,7 +1,7 @@
 import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS } from "./actionTypes"
 
 const initState = {
-    counter: 0,
+   
     isLoading: false,
     data: [],
     error: null
