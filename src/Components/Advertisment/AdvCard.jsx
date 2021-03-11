@@ -1,5 +1,5 @@
 import React from 'react' 
-import styles from '../Styles/AdvertiseRight.module.css'
+import styles from '../../Styles/AdvertiseRight.module.css'
 const AdvCard = ({id,img}) => {
    const [close, setClose] = React.useState(false)
 

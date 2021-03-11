@@ -6,7 +6,7 @@ import styles from '../../Styles/BusinessBody.module.css';
 import { BannerBusiness } from '../NavbarBusiness/BannerBusiness';
 import { SubNav } from '../NavbarBusiness/SubNav';
 const InternationalBusiness = () => {
-	const { economyNews, isLoadingIndia } = useSelector(
+	const { economyNews} = useSelector(
 		(state) => state.business,
 		shallowEqual
 	);
