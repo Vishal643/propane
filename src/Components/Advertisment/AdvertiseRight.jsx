@@ -1,7 +1,8 @@
 
 import React from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import { fetchAdvById } from '../Redux/Advertisement/action';
+import { fetchAdvById } from '../../Redux/Advertisement/action';
+
 import { AdvCard } from './AdvCard';
 
 const AdvertiseRight = () => {
@@ -21,7 +22,7 @@ const AdvertiseRight = () => {
     
     return (
         <>
-            {isLoading && <h3>...Loading</h3>}
+            {/* {isLoading && <h3>...Loading</h3>} */}
             {error && <div>something went wrong</div>}
             <AdvCard img={randomStr} />
            

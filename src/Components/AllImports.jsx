@@ -3,7 +3,7 @@ import { ExtraNewsPoints } from '../Components/relatedToHeader/ExtraNewsPoints';
 import { HeaderImage } from '../Components/relatedToHeader/HeaderImage';
 import { TopContent } from '../Components/relatedToHeader/TopContent';
 import { VideoCard } from '../Components/relatedToHeader/VideoCard';
-import { AdvertiseRight } from '../Components/Advertisment/AdsRightSide';
+import { AdvertiseRight } from '../Components/Advertisment/AdvertiseRight.jsx';
 import { TopAdverRedBox } from '../Components/relatedToHeader/TopAdverRedBox';
 
 function AllImports() {
@@ -21,7 +21,7 @@ function AllImports() {
 					<VideoCard />
 				</div>
 				<div className={styles.Maindiv__right}>
-					{/* <AdvertiseRight /> */}
+					<AdvertiseRight />
 					<ExtraNewsPoints />
 				</div>
 			</div>
