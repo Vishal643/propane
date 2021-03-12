@@ -11,7 +11,7 @@ import { SearchFunc } from '../Components/SearchFunctionality/SearchFunc';
 import { NavbarBusiness } from '../Components/NavbarBusiness/NavbarBusiness';
 import { PrivateRoutes } from './PrivateRoutes';
 import Register from '../Components/RegisterPage/Register';
-
+import { NewTaxCalculator } from '../Components/TaxCalculation/NewTaxCalculator';
 import AllImports from '../Components/AllImports';
 import { PostStory1 } from '../Components/PostNews/PostStory1';
 
@@ -43,6 +43,9 @@ const Routes = () => {
 				</Route>
 				<Route path='/tech' exact>
 					<TechPage />
+				</Route>
+				<Route exact path='/tax-calculator'>
+					<NewTaxCalculator />
 				</Route>
 				<Route path='/tech/:id' exact>
 					<IndividualTechNews data={indivisualNews} />

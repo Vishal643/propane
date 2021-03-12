@@ -1,35 +1,41 @@
-import React, {useState} from 'react';
-import "./styles.css"
+import React, { useState } from 'react';
+import '../../Styles/styles.css';
 
 const Marquee = (props) => {
+	const [isActive, setIsActive] = useState(true);
 
-  const [isActive, setIsActive] = useState(true)
+	function handleMouseEnter(e) {
+		// console.log("entered")
 
+		setIsActive(false);
+	}
 
-  function handleMouseEnter(e) {
-    // console.log("entered")
+	function handleMouseLeave(e) {
+		// console.log("left")
+		setIsActive(true);
+	}
 
-    setIsActive(false);
-  }
+	function handleClick(e) {
+		console.log('click');
+		setIsActive(true);
+	}
 
-  function handleMouseLeave(e) {
-    // console.log("left")
-    setIsActive(true);
-
-  }
-
-  function handleClick (e){
-    console.log("click")
-    setIsActive(true);
-  }
-
-  return(
-    <div className="marquee-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
-      <div className="marquee">
-        <p className={isActive ? 'marquee-content' : 'marquee-content inactive'}>{props.string}</p>     
-      </div>
-    </div>
-  )
-}
+	return (
+		<div
+			className='marquee-container'
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+			onClick={handleClick}
+		>
+			<div className='marquee'>
+				<p
+					className={isActive ? 'marquee-content' : 'marquee-content inactive'}
+				>
+					{props.string}
+				</p>
+			</div>
+		</div>
+	);
+};
 
 export default Marquee;

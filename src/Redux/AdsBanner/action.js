@@ -1,11 +1,9 @@
 import axios from 'axios';
 import {
-	
-    GET_BANNER,
-    GET_BANNER_FAILURE,
-    GET_BANNER_REQUEST,
-    GET_BANNER_SUCCESS
-
+	GET_BANNER,
+	GET_BANNER_FAILURE,
+	GET_BANNER_REQUEST,
+	GET_BANNER_SUCCESS,
 } from './actionTypes';
 
 const getAdsRequest = () => {
@@ -28,22 +26,19 @@ const getAdsFailure = () => {
 };
 
 const getBannerSuccess = (id, img) => {
-	console.log(id,img)
+	console.log(id, img);
 	return {
 		type: GET_BANNER,
 		payload: { id, img },
 	};
 };
 
-
-
-
 // fetching Both sides Banner Ads
 
 const fetchAdsBannerById = (id) => (dispatch) => {
 	dispatch(getAdsRequest());
 	return axios
-		.get(`http://localhost:3000/adsCorner/${id}`)
+		.get(`https://fake-mocker.herokuapp.com/adsCorner/${id}`)
 		.then((res) => {
 			console.log(res);
 			const { id, img } = res.data;
@@ -56,7 +51,4 @@ const fetchAdsBannerById = (id) => (dispatch) => {
 		});
 };
 
-
-
-
-export {fetchAdsBannerById};
+export { fetchAdsBannerById };
