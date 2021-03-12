@@ -9,21 +9,29 @@ import { IndividualNews } from '../Components/BusinessBody/IndividualNews';
 import { InternationalBusiness } from '../Components/BusinessBody/InternationalBusiness';
 import { SearchFunc } from '../Components/SearchFunctionality/SearchFunc';
 import { NavbarBusiness } from '../Components/NavbarBusiness/NavbarBusiness';
-import {PrivateRoutes} from './PrivateRoutes'
+import { PrivateRoutes } from './PrivateRoutes';
 import Register from '../Components/RegisterPage/Register';
 
 import AllImports from '../Components/AllImports';
+import { PostStory1 } from '../Components/PostNews/PostStory1';
 
 const Routes = () => {
-	const { businessData, businessIndia, economyNews,typeGen, typeIn, typeInt } = useSelector(
-		(state) => state.business,
-		shallowEqual
-	);
+	const {
+		businessData,
+		businessIndia,
+		economyNews,
+		typeGen,
+		typeIn,
+		typeInt,
+	} = useSelector((state) => state.business, shallowEqual);
 	const { indivisualNews } = useSelector(
 		(state) => state.techReducer,
 		shallowEqual
 	);
-	const { searchArray, finding} = useSelector((state) => state.search, shallowEqual);
+	const { searchArray, finding } = useSelector(
+		(state) => state.search,
+		shallowEqual
+	);
 	return (
 		<div>
 			<Switch>
@@ -64,15 +72,17 @@ const Routes = () => {
 				</Route>
 
 				<Route path='/search/:find/:id' exact>
-					<IndividualNews data={searchArray} type={finding}/>
+					<IndividualNews data={searchArray} type={finding} />
 				</Route>
-				<Route path = "/register">
-                      <Register/>
-               </Route>
-               
-				<PrivateRoutes exact path = "/" Mycomponent = {AllImports} />
+				<Route path='/register'>
+					<Register />
+				</Route>
 
-				
+				<PrivateRoutes exact path='/' Mycomponent={AllImports} />
+
+				<Route path='/city' exact>
+					<PostStory1 />
+				</Route>
 				<Route>
 					<h1>Page not found?</h1>
 				</Route>

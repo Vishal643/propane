@@ -9,7 +9,7 @@ import {
 	getIndivisualNewsData,
 } from '../../Redux/techPage/actions';
 import { AdvertiseRight } from '../Advertisment/AdvertiseRight';
-// import Comment from './Comment';
+import GridFooter from '../footerPage/GridFooter';
 
 //Links and styles
 const links = [
@@ -236,12 +236,12 @@ const TechPage = () => {
 								src={item.image_link}
 								alt='tech_news'
 							/>
-							<p className={style.tech_news_desc}>{item.description}</p>
+							<p className={style.tech_news_desc}>{item.headline}</p>
 						</div>
 					))
 				)}
 			</div>
-			{/* <Comment /> */}
+			<GridFooter />
 		</>
 	);
 };
