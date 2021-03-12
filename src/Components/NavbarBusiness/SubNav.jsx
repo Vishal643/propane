@@ -1,22 +1,21 @@
 import React from 'react';
 import { AiFillHome, AiOutlineSearch } from 'react-icons/ai';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import styles from '../../Styles/SubNav.module.css';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Popover from '@material-ui/core/Popover';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { getSearch } from '../../Redux/SearchFunction/action';
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-const useStyles = makeStyles((theme) => ({
-	// typography: {
-	//   padding: theme.spacing(2),
-	// },
-	modalStyle: {
-		// background:"black",
-	},
-}));
+// const useStyles = makeStyles((theme) => ({
+// 	// typography: {
+// 	//   padding: theme.spacing(2),
+// 	// },
+// 	modalStyle: {
+// 		// background:"black",
+// 	},
+// }));
 
 const SubNav = () => {
 	const dispatch = useDispatch();
@@ -29,7 +28,7 @@ const SubNav = () => {
 	const handleSearch = () => {
 		if (find !== '') {
 			dispatch(getSearch(find));
-			history.push(`/business/search/${find}`);
+			history.push(`/search/${find}`);
 			setFind('');
 		}
 	};
@@ -96,7 +95,7 @@ const SubNav = () => {
 						onClose={handleClose}
 						anchorOrigin={{
 							vertical: -80,
-							horizontal: 50,
+							horizontal: 65,
 						}}
 						transformOrigin={{
 							vertical: 'center',
