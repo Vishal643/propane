@@ -9,6 +9,7 @@ import { IndividualNews } from '../Components/BusinessBody/IndividualNews';
 import { InternationalBusiness } from '../Components/BusinessBody/InternationalBusiness';
 import { SearchFunc } from '../Components/SearchFunctionality/SearchFunc';
 import { NavbarBusiness } from '../Components/NavbarBusiness/NavbarBusiness';
+import { PostStory1 } from '../Components/PostNews/PostStory1';
 
 const Routes = () => {
 	const { businessData, businessIndia, economyNews } = useSelector(
@@ -62,7 +63,9 @@ const Routes = () => {
 				<Route path='/business/search/:find/:id' exact>
 					<IndividualNews data={searchArray} />
 				</Route>
-
+				<Route path='/city' exact>
+					<PostStory1 />
+				</Route>
 				<Route>
 					<h1>Page not found?</h1>
 				</Route>
