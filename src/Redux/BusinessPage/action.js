@@ -7,10 +7,10 @@ const getBusinessRequest=()=>{
     }
 }
 
-const getBusinessSuccess=(payload)=>{
+const getBusinessSuccess=(news, name)=>{
     return{
         type: GET_BUSINESSAPI_SUCCESS, 
-        payload
+        payload :{news, name}
     }
 }
 
@@ -26,10 +26,11 @@ const getBusinessIndiaReq=()=>{
     }
 }
 
-const getBusinessIndiaSuccess=(payload)=>{
+const getBusinessIndiaSuccess=(news, name)=>{
     return{
         type: GET_BUSINESS_INDIA_SUCCESS, 
-        payload
+        payload :{news, name}
+        
     }
 }
 
@@ -39,10 +40,11 @@ const getBusinessIndiaFailure=()=>{
     }
 }
 
-const getBusinessInternationalSuccess=(payload)=>{
+const getBusinessInternationalSuccess=(news, name)=>{
     return{
         type: GET_INTERNATIONAL_SUCCESS, 
-        payload
+        payload :{news, name}
+        
     }
 }
 
@@ -50,12 +52,8 @@ const getBusinessApi=(params)=>(dispatch)=>{
 
     dispatch(getBusinessRequest())
 
-    return axios.get("https://fake-mocker.herokuapp.com/general_business_news",{
-        params:{
-            _limit:5
-        }
-    }
-    ).then((res)=>dispatch(getBusinessSuccess(res.data) ) )
+    return axios.get("https://fake-mocker.herokuapp.com/general_business_news"
+    ).then((res)=>dispatch(getBusinessSuccess(res.data, 'general') ) )
     .catch((err)=>dispatch(getBusinessFailure() ))
 }
 
@@ -65,12 +63,8 @@ const getBusinessIndia=(params)=>(dispatch)=>{
 
     dispatch(getBusinessIndiaReq())
 
-    return axios.get("https://fake-mocker.herokuapp.com/indian_business_news",{
-        params:{
-            _limit:5
-        }
-    }
-    ).then((res)=>dispatch( getBusinessIndiaSuccess(res.data) ) )
+    return axios.get("https://fake-mocker.herokuapp.com/indian_business_news"
+    ).then((res)=>dispatch( getBusinessIndiaSuccess(res.data, 'India') ) )
     .catch((err)=>dispatch( getBusinessIndiaFailure() ))
 
 }
@@ -79,12 +73,8 @@ const getBusinessInternational=(params)=>(dispatch)=>{
 
     // dispatch(getBusinessIndiaReq())
 
-    return axios.get("https://fake-mocker.herokuapp.com/international_business_news",{
-        params:{
-            _limit:5
-        }
-    }
-    ).then((res)=>dispatch( getBusinessInternationalSuccess(res.data) ) )
+    return axios.get("https://fake-mocker.herokuapp.com/international_business_news"
+    ).then((res)=>dispatch( getBusinessInternationalSuccess(res.data, 'International') ) )
     .catch((err)=> console.log(err))
 
    
@@ -93,3 +83,17 @@ const getBusinessInternational=(params)=>(dispatch)=>{
 }
 
 export {getBusinessApi, getBusinessIndia, getBusinessInternational}
+
+
+// const getBusinessApi=(params)=>(dispatch)=>{
+
+//     dispatch(getBusinessRequest())
+
+//     return axios.get("https://fake-mocker.herokuapp.com/general_business_news",{
+//         params:{
+//             _limit:5
+//         }
+//     }
+//     ).then((res)=>dispatch(getBusinessSuccess(res.data, 'general') ) )
+//     .catch((err)=>dispatch(getBusinessFailure() ))
+// }

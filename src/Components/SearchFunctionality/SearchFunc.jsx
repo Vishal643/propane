@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import styles from '../../Styles/SearchFunc.module.css';
 import { BannerBusiness } from '../NavbarBusiness/BannerBusiness';
 import { SubNav } from '../NavbarBusiness/SubNav';
+import {FaBookReader} from "react-icons/fa"
+import {BsCalendar} from "react-icons/bs"
 
 const SearchFunc = () => {
 	const { find } = useParams();
@@ -48,26 +50,29 @@ const SearchFunc = () => {
 				) : (
 					searchArray
 						?.sort((a, b) => {
-							if (order === 'latest') {
-								// return a.date - b.date
-							} else if (order === 'oldest') {
-								// return b.date-a.date
+						
+							if (order === 'oldest') {
+								return new Date(a.date) - new Date(b.date)
+							} else if (order === 'latest') {
+								return new Date(b.date) - new Date(a.date)
 							} else if (order === 'read') {
-								// return b.count-a.count
-							} else if (order === 'any') {
-								return;
+								return b.readerCount-a.readerCount
+							}else{
+								return 
 							}
 						})
 						.map((item, i) => (
 							<div key={i} className={styles.search_content_main}>
 								<div></div>
 
-								<img src={item.image_link} alt='news image' width='80%' />
+								<img src={item.image_link} alt='news pic' width='80%' />
 								<p>
-									<Link to={`/business/search/${find}/${item.id}`}>
+									<Link to={`/search/${find}/${item.id}`}>
 										{item.headline}
 									</Link>
 								</p>
+								<p><BsCalendar/> {item.date} <span> <FaBookReader/> {item.readerCount}</span></p>
+
 							</div>
 						))
 				)}

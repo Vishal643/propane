@@ -1,3 +1,4 @@
+
 .individual_wrapper{
     width: 80%;
     margin: 0 auto;
@@ -12,8 +13,14 @@
 }
 
 .individual_subWrapper>p:nth-of-type(1){
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: underline;
+
+}
+.individual_subWrapper>p:nth-of-type(1):hover{
+    text-decoration: none;
 }
 
 .individual_content{
@@ -27,4 +34,105 @@
     padding-left: 30px;
 
  }
+
+
+ 
+
+ .individual_content_wrapper{
+    display: flex;
+    /* flex-wrap: wrap; */
+    width:80%;
+    margin:10px auto;
+    /* background-color: pink; */
+    /* text-align: center; */
+
+}
+
+.individual_content_main{
+    width:32%;
+    /* background-color: wheat; */
+    margin:20px auto;
+    padding: 0;
+    text-align: center;
+    /* border: 1px solid black; */
+
+}
+
+.individual_content_main>div{
+    background-color: black;
+    opacity: 0.3;
+    /* position: absolute; */
+    position: relative;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;   
+}
+
+.individual_content_main:hover{
+    transform: scale(1.05,1);
+}
+
+.individual_content_main>img{
+    margin-top: -200px;
+    margin-left: -1px;
+    height: 220px;
+}
+.individual_content_main>p:nth-of-type(1){
+    position: relative;
+    margin: -90px auto 0px auto;
+    width: 75%;
+    height:50px;
+    font-weight: bolder;
+    font-size: 18px;  
+}
+
+.individual_content_main>p:nth-of-type(2){
+
+    margin: 40px auto 0px auto; 
+    width:fit-content;
+    font-weight: bolder;
+    font-size: 15px;  
+    color: gray;
+    padding: 0px 50px;
+    border-bottom: 1px solid rgb(211, 208, 208)
+}
+.individual_content_main>p>span{
+    margin-left: 50px;
+}
+.individual_content_main>p:nth-of-type(2):hover{
+    color: black;
+}
+
+
+
+.individual_content_main a{
+    text-decoration: none;
+    color: white;
+}
+
+.individual_content_main a:hover{
+    text-decoration: none;
+    color: red;
+}
+
+.individual_content_head{
+    width:80%;
+    margin:30px auto;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.individual_content_dropDown{
+    margin-top: 30px;
+}
+.individual_content_dropDown select{
+    padding: 5px 40px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+}
+
+
+
+
  

@@ -10,11 +10,11 @@ import { SearchFunc } from '../Components/SearchFunctionality/SearchFunc';
 import { NavbarBusiness } from '../Components/NavbarBusiness/NavbarBusiness';
 
 const Routes = () => {
-	const { businessData, businessIndia, economyNews } = useSelector(
+	const { businessData, businessIndia, economyNews,typeGen, typeIn, typeInt } = useSelector(
 		(state) => state.business,
 		shallowEqual
 	);
-	const { searchArray } = useSelector((state) => state.search, shallowEqual);
+	const { searchArray, finding} = useSelector((state) => state.search, shallowEqual);
 	return (
 		<div>
 			<Switch>
@@ -39,23 +39,23 @@ const Routes = () => {
 				</Route>
 
 				<Route path='/business/general/:id' exact>
-					<IndividualNews data={businessData} />
+					<IndividualNews data={businessData} type={typeGen} />
 				</Route>
 
 				<Route path='/business/india/:id' exact>
-					<IndividualNews data={businessIndia} />
+					<IndividualNews data={businessIndia} type={typeIn} />
 				</Route>
 
 				<Route path='/business/international/:id' exact>
-					<IndividualNews data={economyNews} />
+					<IndividualNews data={economyNews} type={typeInt} />
 				</Route>
 
-				<Route path='/business/search/:find' exact>
+				<Route path='/search/:find' exact>
 					<SearchFunc />
 				</Route>
 
-				<Route path='/business/search/:find/:id' exact>
-					<IndividualNews data={searchArray} />
+				<Route path='/search/:find/:id' exact>
+					<IndividualNews data={searchArray} type={finding}/>
 				</Route>
 
 				<Route>

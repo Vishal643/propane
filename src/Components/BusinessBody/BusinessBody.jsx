@@ -11,7 +11,7 @@ import styles from '../../Styles/BusinessBody.module.css';
 
 const BusinessBody = () => {
 	const dispatch = useDispatch();
-	const { businessData, economyNews } = useSelector(
+	const { businessData, economyNews, businessIndia } = useSelector(
 		(state) => state.business,
 		shallowEqual
 	);
@@ -44,7 +44,8 @@ const BusinessBody = () => {
 
 					<div className={styles.business_newshead_wrapper}>
 						{businessData?.map((item, i) => (
-							<div className={styles.business_news_head} key={i}>
+							i<5 &&
+							<div className={styles.business_news_head} key={item.id}>
 								<div>
 									<Link to={`/business/general/${item.id}`}>
 										{item.headline}
@@ -56,6 +57,40 @@ const BusinessBody = () => {
 				</div>
 			</div>
 			{/* india business */}
+
+			<div>
+				<div className={styles.business_head}>
+					<p>
+						INDIA BUSINESS <strong> NEWS </strong>
+					</p>
+					<div></div>
+				</div>
+
+				<div className={styles.business_news_wrapper}>
+					<div className={styles.business_news_main}>
+						<img
+							src='https://img.etimg.com/thumb/msid-76005001,width-300,imgsize-115155,,resizemode-4,quality-100/.jpg'
+							alt='pic'
+							width='101%'
+							height='250px'
+						/>
+						<p>Travelers gaining confidence, time to plan for restart: IATA</p>
+					</div>
+
+					<div className={styles.business_newshead_wrapper}>
+						{businessIndia?.map((item, i) => (
+							i<5 &&
+							<div className={styles.business_news_head} key={item.id}>
+								<div>
+									<Link to={`/business/india/${item.id}`}>{item.headline}</Link>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+
+			{/* International Business */}
 				
 			<div>
 				<div className={styles.business_head}>
@@ -81,7 +116,8 @@ const BusinessBody = () => {
 
 					<div className={styles.business_newshead_wrapper}>
 						{economyNews?.map((item, i) => (
-							<div className={styles.business_news_head} key={i}>
+							i<5 &&
+							<div className={styles.business_news_head} key={item.id}>
 								<div>
 									<Link to={`/business/international/${item.id}`}>
 										{item.headline}

@@ -7,7 +7,12 @@ const initstate={
     isLoading: false,
     isError : false, 
     isLoadingIndia : false,
-    isErrorIndia : false
+    isErrorIndia : false,
+    typeGen:"",
+    typeIn:"",
+    typeInt:""
+
+
 }
 
 const businessReducer = (state= initstate, {type, payload})=>{
@@ -27,7 +32,8 @@ const businessReducer = (state= initstate, {type, payload})=>{
                 ...state,
                 isLoading:false,
                 isError:false,
-                businessData: payload
+                businessData: payload.news,
+                typeGen : payload.name
             }
         }
 
@@ -53,7 +59,8 @@ const businessReducer = (state= initstate, {type, payload})=>{
                 ...state,
                 isLoadingIndia: false,
                 isErrorIndia: false,
-                businessIndia:payload
+                businessIndia: payload.news,
+                typeIn : payload.name
 
             }
         }
@@ -72,7 +79,8 @@ const businessReducer = (state= initstate, {type, payload})=>{
                 ...state,
                 isLoadingIndia: false,
                 isErrorIndia: false,
-                economyNews:payload
+                economyNews: payload.news,
+                typeInt : payload.name
 
             }
         }
