@@ -36,3 +36,44 @@ button.rec-dot{
   } */
 
  
+  .marquee-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(124, 22, 8);
+    margin-top: 30px; 
+    width: 450px;
+   
+  }
+  
+  .marquee {
+    /* border: solid 1px #ccc; */
+     width:80%;
+    padding: 5px 0;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .marquee-content {
+    animation-duration: 6s;
+    animation-name: marquee;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .marquee-content.inactive {
+    animation-play-state: paused;
+  }
+  
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(100%)
+    }
+  
+    to {
+      transform: translateX(-100%)
+    }
+  }
+  

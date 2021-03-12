@@ -10,7 +10,8 @@ import { businessReducer } from "./BusinessPage/reducer";
 import { searchReducer } from "./SearchFunction/reducer";
 import {loginReducer} from './login/loginReducer';
 import {registerReducer} from './register/registerReducer';
-
+import {Taxreducer} from "./TaxCalculationRedux/reducer"
+import {Breakreducer } from  "./BreakingNews/reducer"
 
 const rootReducer = combineReducers({
     techReducer: techPageReducer,
@@ -22,6 +23,9 @@ const rootReducer = combineReducers({
     AdsBanner: bannerReducer,
     register: registerReducer,
      auth: loginReducer,
+     TaxCalculationRedux:Taxreducer,
+    BreakingNews:Breakreducer 
+
 });
 
 let composeEnhancers = compose;
