@@ -8,6 +8,9 @@ import {reducer as advreducer} from './Advertisement/reducer'
 import {reducer as bannerReducer} from './AdsBanner/reducer'
 import { businessReducer } from "./BusinessPage/reducer";
 import { searchReducer } from "./SearchFunction/reducer";
+import {loginReducer} from './login/loginReducer';
+import {registerReducer} from './register/registerReducer';
+
 
 const rootReducer = combineReducers({
     techReducer: techPageReducer,
@@ -16,7 +19,9 @@ const rootReducer = combineReducers({
     Advertisement: advreducer,
     business : businessReducer,
     search : searchReducer,
-    AdsBanner: bannerReducer
+    AdsBanner: bannerReducer,
+    register: registerReducer,
+     auth: loginReducer,
 });
 
 let composeEnhancers = compose;

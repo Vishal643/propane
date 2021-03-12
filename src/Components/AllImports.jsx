@@ -11,7 +11,6 @@ import { AdsLeftBanner} from './Advertisment/AdsLeftBanner';
 function AllImports() {
 	return (
 
-	
 				
 				<div>
 					<div>

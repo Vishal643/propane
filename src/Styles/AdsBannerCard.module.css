@@ -1,11 +1,11 @@
 .adsBannerCard {
     height: 500px;
-    width: 120px;
+    width: 100px;
    
 }
 
 .adsBannerCard img {
-   width: 120px;
+   width: 100px;
    height: 100%;
 }
 
