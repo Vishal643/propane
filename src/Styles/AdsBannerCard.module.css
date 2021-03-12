@@ -1,0 +1,25 @@
+.adsBannerCard {
+    height: 500px;
+    width: 120px;
+   
+}
+
+.adsBannerCard img {
+   width: 120px;
+   height: 100%;
+}
+
+.emtyBanner {
+    height: 400px;
+    width: 120px;
+   
+}
+
+.adsBannerCard button {
+    color: white;
+    font-weight: 1000;
+    background-color: red;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
