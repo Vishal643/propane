@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux'
 import styles from '../../Styles/HomePageHeader.module.css';
 import {
 	GrFacebookOption,
@@ -10,7 +11,11 @@ import {
 	IoMdNotificationsOutline,
 } from 'react-icons/all';
 
+
+
 const HomePageHeader = ({ src, alt, extras, links, style, handleChange }) => {
+	const isAuth = useSelector((state) => state.auth.isAuth)
+	const username = useSelector((state)=> state.auth.currentUser)
 	let date = new Date();
 	return (
 		<div>
@@ -33,8 +38,9 @@ const HomePageHeader = ({ src, alt, extras, links, style, handleChange }) => {
 					<p>PATNA 29°C</p>
 				</div>
 				<div className={styles.right_content}>
-					<Link className={styles.link} to='sign-in'>
-						SIGN IN
+					<Link className={styles.link} to='/register'>
+                        {isAuth? username : "SIGN IN" }
+						
 					</Link>
 					<span className={styles.social_medial_icon}>
 						<IoMdNotificationsOutline />

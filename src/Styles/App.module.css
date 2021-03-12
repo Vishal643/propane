@@ -1,18 +1,37 @@
+
+
 .Maindiv {
   display: flex;
+ 
+  width: 100%;
+}
 
+.leftBanner {
+  margin-left: 2%;
+  width: 10%;
+}
+
+.RightBanner {
+  width: 10%;
 }
 
 .Maindiv__left {
   border-right: 1px dotted grey;
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin-left: 7%;
+  max-width: 40%;
+  margin-left: 1%;
+  
+ 
 }
 
 .Maindiv__middle {
   margin-left: 2%;
-  width: 13%;
+  width: 14%;
   border-right: 1px dotted grey;
+}
+
+.Maindiv__right {
+  width: 30%;
+  margin-right: 1%;
 }
