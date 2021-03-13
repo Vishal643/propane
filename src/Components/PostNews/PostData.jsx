@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../Styles/PostStory1.module.css';
+import styles from '../../Styles/PostData.module.css';
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 import MessageIcon from '@material-ui/icons/Message';
