@@ -28,6 +28,7 @@ export let apiMockerFailure = (payload) => {
 };
 
 export let fetchLoginData = (payload) => (dispatch) => {
+    
     dispatch(apiMockerRequest());
     console.log(payload, "datafetch");
 
@@ -44,6 +45,9 @@ export let fetchLoginData = (payload) => (dispatch) => {
         })
         .catch((err) => {
             console.log(err);
-            dispatch(apiMockerFailure(err));
+            if(err){
+                dispatch(apiMockerFailure(err));
+            }
+           
         });
 };

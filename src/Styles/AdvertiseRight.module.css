@@ -2,6 +2,7 @@
  
   height: 25%;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .advertiseBox p {
@@ -10,6 +11,7 @@
 }
 
 .advertiseBox button {
- border-radius: 45%;
+  width: 20px;
+ border-radius: 50%;
  border: none;
 }

@@ -14,6 +14,7 @@ import Register from '../Components/RegisterPage/Register';
 import { NewTaxCalculator } from '../Components/TaxCalculation/NewTaxCalculator';
 import AllImports from '../Components/AllImports';
 import { PostStory1 } from '../Components/PostNews/PostStory1';
+import Login from '../Components/LoginPage/Login'
 
 const Routes = () => {
 	const {
@@ -77,10 +78,12 @@ const Routes = () => {
 				<Route path='/search/:find/:id' exact>
 					<IndividualNews data={searchArray} type={finding} />
 				</Route>
-				<Route path='/register'>
+				<Route path='/register' exact>
 					<Register />
 				</Route>
-
+				<Route path='/login' exact>
+					<Login />
+				</Route>
 				<PrivateRoutes exact path='/' Mycomponent={AllImports} />
 
 				<Route path='/blogs' exact>

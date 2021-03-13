@@ -7,6 +7,7 @@ import { BannerBusiness } from '../NavbarBusiness/BannerBusiness';
 import { SubNav } from '../NavbarBusiness/SubNav';
 import {FaBookReader} from "react-icons/fa"
 import {BsCalendar} from "react-icons/bs"
+import GridFooter from '../footerPage/GridFooter';
 
 const SearchFunc = () => {
 	const { find } = useParams();
@@ -76,7 +77,11 @@ const SearchFunc = () => {
 							</div>
 						))
 				)}
+
 			</div>
+			<div style={{margin:"10% auto 0%", borderTop:"1px solid gray"}}>
+			<GridFooter  />
+		    </div>
 		</>
 	);
 };

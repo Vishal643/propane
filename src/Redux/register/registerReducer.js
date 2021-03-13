@@ -1,11 +1,15 @@
 import { REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS } from "./actionTypes"
+import {setToken,getToken} from '../../Components/LoginPage/Utils'
 
+const registered = getToken('isRegistered') ? true : false 
+console.log(registered)
 const initState = {
     isLoading:false,
     error:false,
     errMsg:"",
     message:"",
-    isRegistered:false
+    isRegistered:registered
+    
 }
 
 export const registerReducer = (state = initState, {type,payload}) =>{
@@ -19,12 +23,13 @@ export const registerReducer = (state = initState, {type,payload}) =>{
         }
 
         case REGISTER_SUCCESS:{
+            setToken(true);
             return{
                 ...state,
                 isLoading:false,
                 error:false,
                 isRegistered:true,
-               
+                
                 message: payload
                 
             }

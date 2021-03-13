@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     width:80%;
-    margin:10px auto;
+    margin:5px auto;
+    /* justify-content: space-evenly; */
     /* background-color: pink; */
     /* text-align: center; */
 
@@ -10,8 +11,9 @@
 
 .search_content_main{
     width:32%;
+    
     /* background-color: wheat; */
-    margin:20px auto;
+    margin:20px 0px;
     padding: 0;
     text-align: center;
     /* border: 1px solid black; */
@@ -25,7 +27,8 @@
     position: relative;
     width: 80%;
     height: 200px;
-    margin: 0 auto;   
+    margin: 0 auto;
+  
 }
 
 .search_content_main:hover{

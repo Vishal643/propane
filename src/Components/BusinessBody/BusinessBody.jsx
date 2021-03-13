@@ -7,6 +7,7 @@ import {
 	getBusinessInternational,
 } from '../../Redux/BusinessPage/action';
 import styles from '../../Styles/BusinessBody.module.css';
+import { AdsLeftBanner } from '../Advertisment/AdsLeftBanner';
 
 const BusinessBody = () => {
 	const dispatch = useDispatch();
@@ -23,13 +24,13 @@ const BusinessBody = () => {
 	}, []);
 
 	return (
-		<>
-			<div>
+		<div className={styles.business_wrapper}>
+			<div >
 				<div className={styles.business_head}>
 					<p>
 						BUSINESS <strong> NEWS </strong>
 					</p>
-					<div></div>
+					<div style={{width:"80%"}}></div>
 				</div>
 
 				<div className={styles.business_news_wrapper}>
@@ -103,7 +104,7 @@ const BusinessBody = () => {
 					<p>
 						INTERNATIONAL BUSINESS <strong> NEWS </strong>
 					</p>
-					<div style={{ width: '60%' }}></div>
+					<div style={{ width: '70%' }}></div>
 				</div>
 
 				<div className={styles.business_news_wrapper}>
@@ -136,7 +137,7 @@ const BusinessBody = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

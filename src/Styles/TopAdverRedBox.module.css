@@ -29,6 +29,7 @@
 }
 
 .topAdverRedBox h3 {
+<<<<<<< HEAD
 	margin-top: 1%;
 	font-size: 20px;
 	font-weight: 400;
@@ -40,3 +41,17 @@
 	font-size: large;
 	color: lightgrey;
 }
+=======
+    margin-top: 0.5%;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.topAdverRedBox p {
+   
+    margin-left: 15%;
+    margin-top: 0.8%;
+    font-size: large;
+    color: lightgrey;
+}
+>>>>>>> 54059dc7731f5990a52e77e109f9303c46e74293

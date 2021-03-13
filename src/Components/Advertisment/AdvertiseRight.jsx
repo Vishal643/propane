@@ -11,13 +11,16 @@ const AdvertiseRight = () => {
     const{isLoading,randomStr,error} = useSelector((state) => state.Advertisement , shallowEqual);
     
     React.useEffect(() => {
-       setInterval(() => {
+     let intervalId =  setInterval(() => {
             for(let i=1;i<11;i++){
                 var num = Math.floor( (Math.random() * 11)+1 );
                 console.log(num)
                 dispatch(fetchAdvById(num))
             }
       },5000)
+      return(() => {
+        clearInterval(intervalId)
+    })
     },[dispatch]) 
     
     return (

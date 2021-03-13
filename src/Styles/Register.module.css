@@ -8,19 +8,15 @@
 }
 
 .register input {
-    width: 350px;
-    padding: 15px;
+    width: 300px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 
 .register button {
-    margin-left: 70px;
+    
     padding: 15px;
     width: 250px;
 
 }
 
-.register input[type=submit] {
-    margin-left:70px;
-    width: 250px;
-}
