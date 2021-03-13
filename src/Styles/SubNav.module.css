@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     width: 80%;
     margin: -1px auto;
-    height: 30px;
+    height: 40px;
     justify-content:space-between ;
    
 }
@@ -13,7 +13,7 @@
 .subnav_wrapper>div:nth-of-type(1){
     display: flex;
     flex-wrap: wrap;
-    margin-top: -10px;
+    margin-top: 8px;
     padding-left: 3%;
     justify-content: space-between;
     width: 80%;
@@ -41,8 +41,8 @@
 .subnav_subhead{
     width: 80%;
     margin: 0px auto;
-    height: 25px;
-    font-size: 12px;
+    height: 30px;
+    font-size: 14px;
     padding-top: 0.5%;
     box-shadow: 0px 0px 20px 0px black;
 }
@@ -52,8 +52,6 @@
     background-color:#292929 ;
     width: fit-content;
     border: 1px solid black;  
-    
-
 }
 
 .subnav_input>input{

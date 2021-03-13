@@ -2,6 +2,7 @@ import React from "react"
 import styles from "../../Styles/NavbarBusiness.module.css"
 import {FaTwitter, FaWifi, FaFacebookF} from "react-icons/fa"
 import {AiFillYoutube} from "react-icons/ai"
+import { shallowEqual, useSelector } from "react-redux"
 
 const BannerBusiness=({banner})=>{
 
@@ -13,15 +14,17 @@ const BannerBusiness=({banner})=>{
         setDate (setdate)
     },[])
 
+    const {currentUser} = useSelector((state)=>state.auth, shallowEqual)
+
     return(
        
         <div className={styles.navbar_business_wrapper}>
             <div className={styles.navbar_business_head}>
-                <p style={{padding:"0px 30px"}}>{date}</p>
+                <p style={{padding:"10px 30px"}}>{date}</p>
                 <div className={styles.navbar_business_headEle}>
                     <div>
                         <p>
-                        Hi name
+                        Hi {currentUser}
                         </p>
                     </div>
                     <p><FaTwitter/></p>

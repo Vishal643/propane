@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillHome, AiOutlineSearch } from 'react-icons/ai';
-import { Link, useHistory } from 'react-router-dom';
+import {  NavLink, useHistory } from 'react-router-dom';
 import styles from '../../Styles/SubNav.module.css';
 // import { makeStyles } from '@material-ui/core/styles';
 import Popover from '@material-ui/core/Popover';
@@ -50,20 +50,20 @@ const SubNav = () => {
 			<div className={styles.subnav_wrapper}>
 				<div>
 					<p>
-						<Link to='/'>
+						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white", padding:"2px"}} to='/' exact>
 							<AiFillHome />
-						</Link>
+						</NavLink>
 					</p>
 					<p>
-						<Link to='/business'>Business</Link>
+						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white",  padding:"2px 5px"}} to='/business' exact>Business</NavLink>
 					</p>
 					<p>
-						<Link to='/business/india-business'>India Business</Link>
+						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white", padding:"2px"}} to='/business/india-business' exact>India Business</NavLink>
 					</p>
 					<p>
-						<Link to='/business/international-business'>
+						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white", padding:"2px"}} to='/business/international-business' exact>
 							International Business
-						</Link>
+						</NavLink>
 					</p>
 					<p>Sensex</p>
 					<p>Photos</p>
@@ -71,7 +71,7 @@ const SubNav = () => {
 					<p>GST</p>
 					<p>Budget</p>
 					<p>
-						<Link to='/tax-calculator'>Tax Calculator</Link>
+						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white",padding:"2px"}} to='/tax-calculator' exact>Tax Calculator</NavLink>
 					</p>
 					<p>FAQs</p>
 					<p>Banking</p>
