@@ -4,6 +4,12 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 
 import {Redirect} from "react-router-dom"
 import { fetchLoginData } from '../../Redux/login/action';
+import styles from '../../Styles/Login.module.css'
+import { AdsLeftBanner } from '../Advertisment/AdsLeftBanner';
+import { AdsRightBanner } from '../Advertisment/AdsRightBanner';
+
+
+
 
 const Login =() => {
    const dispatch = useDispatch();
@@ -28,12 +34,24 @@ const Login =() => {
     return loading? (
         <div>...Loading</div>
     ) : error ? (
-        <div>{errMessage}: User not found</div> && <Redirect to="/register"/>
+        <div>{errMessage}</div> && <Redirect to="/login"/>
     ):
     (
+        <>
+       
+     <div className={styles.bannerImg}><img src='https://energasia.in/wp-content/uploads/2020/05/Times-of-india-1000X280.jpg' alt="Business Banner"/></div>  
+     <div className={styles.container}>
+       <div className={styles.left}>
+        <AdsLeftBanner/>
+        </div> 
+      <div className={styles.Login}>  
+      
         <form onSubmit= {onSubmit}>
+           
             <div>
+                
                 <label htmlFor="username">
+                    
                      <input 
                         name= "username"
                         required
@@ -45,6 +63,7 @@ const Login =() => {
                 </label>
             </div>
             <div>
+               
                 <label htmlFor="password">
                      <input 
                         name= "password"
@@ -59,7 +78,19 @@ const Login =() => {
             <button>LOGIN</button>
 
         </form>
+     </div>
+     <div className={styles.left}>
+         <AdsRightBanner/>
+        </div> 
+     </div>
+     </>
     )
+
+
 }
 
 export default Login;
+
+
+
+

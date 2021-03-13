@@ -2,7 +2,7 @@ import React from "react";
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 
 import { registerUser } from "../../Redux/register/action";
-import Login from '../LoginPage/Login'
+import {Redirect} from 'react-router-dom'
 import styles from '../../Styles/Register.module.css'
 
 const Register =() => {
@@ -15,9 +15,10 @@ const Register =() => {
     const[description, setDescription] = React.useState("");
 
 
-    const{loading,message} = useSelector((state) => state.register , shallowEqual);
+    const{loading,isRegistered,message} = useSelector((state) => state.register , shallowEqual);
  
     console.log(message)
+    console.log(isRegistered)
   
    const onSubmit = (e) => {
          e.preventDefault();
@@ -27,7 +28,8 @@ const Register =() => {
 
 
      
-        return(
+        return !isRegistered?(
+          
             <div className={styles.register}>
               <h1>Registration</h1>
             <form onSubmit = {onSubmit}>
@@ -98,12 +100,10 @@ const Register =() => {
             }
            
             {message}
-            <br/>
-            <br/>
-            <br/>
-            <h1>LOG-IN</h1>
-              <Login/>
+
             </div>
+        ) : (
+          <Redirect to="/login" />
         )
     }
 

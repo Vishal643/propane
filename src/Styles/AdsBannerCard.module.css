@@ -19,7 +19,8 @@
     color: white;
     font-weight: 1000;
     background-color: red;
-    border-radius: 20px;
+    width: 20px;
+    border-radius: 10px;
     outline: none;
     border: none;
 }

@@ -9,17 +9,25 @@ const AdsLeftBanner = () => {
     
     const dispatch = useDispatch();
     const{isLoading,bannerStr,error} = useSelector((state) => state.AdsBanner , shallowEqual);
+
+    
     
     React.useEffect(() => {
-       setInterval(() => {
+      let intervalId = setInterval(() => {
             for(let i=1;i<7;i++){
                 var num = Math.floor( (Math.random() * 7)+1 );
                 console.log(num+"hey")
                 dispatch(fetchAdsBannerById(num))
             }
       },5000)
+
+      return(() => {
+        clearInterval(intervalId)
+    })
     },[dispatch]) 
     
+    
+
     return (
         <>
             {/* {isLoading && <h3>...Loading</h3>} */}
