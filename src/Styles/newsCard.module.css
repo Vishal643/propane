@@ -1,33 +1,24 @@
 .newsCard {
-   
-    width: 45%;
-   
-    border-bottom: 1px dotted grey; 
-  
-    margin-right: 4%;
-    margin-bottom: 2%;
-    max-height: 70px;
-    overflow: hidden;
-   
+	width: 45%;
+	border-bottom: 1px dotted grey;
+	margin-right: 4%;
+	margin-bottom: 12px;
+	max-height: 75px;
+	overflow: hidden;
 }
 
 .title {
-    width: 70%;
-    text-align: left;
-    float: left;
+	width: 70%;
+	text-align: left;
+	float: left;
 }
 
 .poster {
-    padding-top: 5%;
-    width: 27%;
-    float: right;
-   
-    
+	padding-top: 5%;
+	width: 27%;
+	float: right;
 }
 
 .poster img {
-    width: 100%;
-   
-    
+	width: 100%;
 }
-

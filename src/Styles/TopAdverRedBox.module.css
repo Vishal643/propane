@@ -1,42 +1,41 @@
 .topAdverRedBox {
-    /* border: 1px solid black; */
-    height: 45px;
-    width: 85%;
-    margin-left: 7%;
-    display: flex;
-    margin-bottom: 2%;
-    border-radius: 5px;
-    color: white;
-    background-color: #E21B22;
+	/* border: 1px solid black; */
+	height: 45px;
+	width: 85%;
+	margin-left: 7%;
+	display: flex;
+	margin-bottom: 2%;
+	border-radius: 5px;
+	color: white;
+	background-color: #e21b22;
 }
 
 .topAdverRedBox div {
-    border-radius: 5px;
-    font-size: large;
-    font-weight: 800;
-    padding-top: 0.2%;
-    padding-bottom: 0.2%;
-    padding-right: 1%;
-    padding-left: 1.5%;
-    width: fit-content;
-    height: fit-content;
-    margin-right: 1%;
-    margin-left: 1.5%;
-    margin-top: .8%;
-    font-weight: 600;
-    background-color: #FFFFFF;
-    color: #E21B22;
+	border-radius: 5px;
+	font-size: large;
+	font-weight: 800;
+	padding-top: 0.2%;
+	padding-bottom: 0.2%;
+	padding-right: 1%;
+	padding-left: 1.5%;
+	width: fit-content;
+	height: fit-content;
+	margin-right: 1%;
+	margin-left: 1.5%;
+	margin-top: 0.8%;
+	font-weight: 600;
+	background-color: #ffffff;
+	color: #e21b22;
 }
 
 .topAdverRedBox h3 {
-    margin-top: 0.5%;
+    margin-top: 0.7%;
     font-size: 20px;
     font-weight: 400;
 }
 
 .topAdverRedBox p {
-   
-    margin-left: 15%;
+    margin-left: 12%;
     margin-top: 0.8%;
     font-size: large;
     color: lightgrey;

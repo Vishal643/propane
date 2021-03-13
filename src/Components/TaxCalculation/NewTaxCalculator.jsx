@@ -1,58 +1,61 @@
 import React from 'react';
-import { CarouselContainer } from '../footerPage/Carousel';
-import GridFooter from '../footerPage/GridFooter';
-import styled from "styled-components";
-import { News } from "../BreakingNews/News";
-import { AdvertiseRight } from "../Advertisment/AdvertiseRight"
-import { AdsRightBanner} from '../Advertisment/AdsRightBanner';
+import styled from 'styled-components';
+import { News } from '../BreakingNews/News';
 import { BannerBusiness } from '../NavbarBusiness/BannerBusiness';
 import { SubNav } from '../NavbarBusiness/SubNav';
+import { CarouselContainer } from '../footerPage/Carousel';
+import GridFooter from '../footerPage/GridFooter';
+import { AdvertiseRight } from "../Advertisment/AdvertiseRight"
+import { AdsRightBanner} from '../Advertisment/AdsRightBanner';
 
 
 export const NewTaxCalculator = () => {
-  const [income, setIncome] = React.useState("");
-  const [taxNewValue, setTaxNewvalue] = React.useState("");
-  const [taxOldValue, setTaxOldvalue] = React.useState("");
+	const [income, setIncome] = React.useState('');
+	const [taxNewValue, setTaxNewvalue] = React.useState('');
+	const [taxOldValue, setTaxOldvalue] = React.useState('');
 
-  // const [grosstax, setGrosstax] = React.useState("");
-  const [deducitonValueC, setDeductionValueC] = React.useState("");
-  const [deducitonValueD, setDeductionValueD] = React.useState("");
-  const [deducitonValueE, setDeductionValueE] = React.useState("");
+	// const [grosstax, setGrosstax] = React.useState("");
+	const [deducitonValueC, setDeductionValueC] = React.useState('');
+	const [deducitonValueD, setDeductionValueD] = React.useState('');
+	const [deducitonValueE, setDeductionValueE] = React.useState('');
 
-  const [displayState, setDisplayState] = React.useState(false);
-  const [finalVal, setFinalVal] = React.useState("");
+	const [displayState, setDisplayState] = React.useState(false);
+	const [finalVal, setFinalVal] = React.useState('');
 
-  const handleClick = () => {
-    // console.log(income);
-    newTaxCalc(income);
-    oldTaxCalc(income);
-    finalTax();
-  };
+	React.useEffect(() => {
+		document.title = 'Income Tax Calculator, Calcutate tax';
+	}, []);
+	const handleClick = () => {
+		// console.log(income);
+		newTaxCalc(income);
+		oldTaxCalc(income);
+		finalTax();
+	};
 
-  const finalTax = () => {
-    if (taxOldValue > taxNewValue) {
-      setDisplayState(true);
-      setFinalVal(Number(taxOldValue) - Number(taxNewValue));
-    } else {
-      setDisplayState(false);
-      setFinalVal(Number(taxNewValue) - Number(taxOldValue));
-      console.log(finalVal);
-    }
-  };
-  // const grosstax = income - stdDeduction;
-  const stdDeduction = 50000;
+	const finalTax = () => {
+		if (taxOldValue > taxNewValue) {
+			setDisplayState(true);
+			setFinalVal(Number(taxOldValue) - Number(taxNewValue));
+		} else {
+			setDisplayState(false);
+			setFinalVal(Number(taxNewValue) - Number(taxOldValue));
+			console.log(finalVal);
+		}
+	};
+	// const grosstax = income - stdDeduction;
+	const stdDeduction = 50000;
 
-  const handleChange = (e) => {
-    const { value } = e.target;
-    setIncome(value);
-  };
+	const handleChange = (e) => {
+		const { value } = e.target;
+		setIncome(value);
+	};
 
-  const newTaxCalc = (income) => {
-    // console.log(income);
-    var amount = income;
-    // setGrosstax(income - stdDeduction)
-    var tax = 0;
-    var total = 0;
+	const newTaxCalc = (income) => {
+		// console.log(income);
+		var amount = income;
+		// setGrosstax(income - stdDeduction)
+		var tax = 0;
+		var total = 0;
 
     if (amount < 250000) {
       tax = 0;
@@ -91,10 +94,10 @@ export const NewTaxCalculator = () => {
     // return tax
   };
 
-  const oldTaxCalc = (income) => {
-    var amount = income;
-    var Oldtax = 0;
-    var oldtotal = 0;
+	const oldTaxCalc = (income) => {
+		var amount = income;
+		var Oldtax = 0;
+		var oldtotal = 0;
 
     var exemption =
       Number(deducitonValueC) +
@@ -121,14 +124,14 @@ export const NewTaxCalculator = () => {
       // console.log(Oldtax);
     }
 
-    Oldtax = Oldtax - oldtotal;
-    // return Oldtax;
+		Oldtax = Oldtax - oldtotal;
+		// return Oldtax;
 
-    var finalVal = Oldtax - Number(exemption);
-    var newtax = Number(finalVal.toFixed(2));
-    setTaxOldvalue(newtax);
-    // return tax
-  };
+		var finalVal = Oldtax - Number(exemption);
+		var newtax = Number(finalVal.toFixed(2));
+		setTaxOldvalue(newtax);
+		// return tax
+	};
 
   return (
     <>
@@ -187,108 +190,108 @@ export const NewTaxCalculator = () => {
             </td>
           </tr>
 
-          <tr>
-            <td style={{ fontWeight: "bold" }}> Gross taxable income</td>
-            <td>
-              <input type="text" name="" id="" value={income - stdDeduction} />
-            </td>
-            <td>
-              <input type="text" name="" id="" value={income} />
-            </td>
-          </tr>
+					<tr>
+						<td style={{ fontWeight: 'bold' }}> Gross taxable income</td>
+						<td>
+							<input type='text' name='' id='' value={income - stdDeduction} />
+						</td>
+						<td>
+							<input type='text' name='' id='' value={income} />
+						</td>
+					</tr>
 
-          <tr>
-            <td style={{ fontWeight: "bold" }}> HRA exemption</td>
+					<tr>
+						<td style={{ fontWeight: 'bold' }}> HRA exemption</td>
 
-            <td>
-              <input type="text" name="" id="" placeholder="0" />
-            </td>
-            <td>
-              <input type="text" name="" id="" value={0} />
-            </td>
-          </tr>
+						<td>
+							<input type='text' name='' id='' placeholder='0' />
+						</td>
+						<td>
+							<input type='text' name='' id='' value={0} />
+						</td>
+					</tr>
 
-          <tr>
-            <td style={{ fontWeight: "bold" }}> Deduciton under section 80C</td>
-            <td>
-              <input
-                type="text"
-                name=""
-                id=""
-                value={deducitonValueC}
-                onChange={(e) => setDeductionValueC(e.target.value)}
-                placeholder="0"
-              />
-            </td>
-            <td>
-              <input type="text" name="" id="" value={0} />
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td style={{ fontSize: "13px" }}>
-              INCLUDES: Life insurance, provident fund contribution, home loan
-              principal repayment, children tuition fees Max deduction ₹1.5 Lakh
-            </td>
-            <td></td>
-          </tr>
+					<tr>
+						<td style={{ fontWeight: 'bold' }}> Deduciton under section 80C</td>
+						<td>
+							<input
+								type='text'
+								name=''
+								id=''
+								value={deducitonValueC}
+								onChange={(e) => setDeductionValueC(e.target.value)}
+								placeholder='0'
+							/>
+						</td>
+						<td>
+							<input type='text' name='' id='' value={0} />
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td style={{ fontSize: '13px' }}>
+							INCLUDES: Life insurance, provident fund contribution, home loan
+							principal repayment, children tuition fees Max deduction ₹1.5 Lakh
+						</td>
+						<td></td>
+					</tr>
 
-          <tr>
-            <td style={{ fontWeight: "bold" }}>Deduction under section 80D</td>
-            <td>
-              <input
-                type="text"
-                name=""
-                id=""
-                value={deducitonValueD}
-                onChange={(e) => setDeductionValueD(e.target.value)}
-                placeholder="0"
-              />
-            </td>
-            <td>
-              <input type="text" name="" id="" value={0} />
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td style={{ fontSize: "13px" }}>
-              INCLUDES: health insurance Max deduction ₹25,000, senior citizen
-              ₹50,000
-            </td>
-            <td></td>
-          </tr>
+					<tr>
+						<td style={{ fontWeight: 'bold' }}>Deduction under section 80D</td>
+						<td>
+							<input
+								type='text'
+								name=''
+								id=''
+								value={deducitonValueD}
+								onChange={(e) => setDeductionValueD(e.target.value)}
+								placeholder='0'
+							/>
+						</td>
+						<td>
+							<input type='text' name='' id='' value={0} />
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td style={{ fontSize: '13px' }}>
+							INCLUDES: health insurance Max deduction ₹25,000, senior citizen
+							₹50,000
+						</td>
+						<td></td>
+					</tr>
 
-          <tr>
-            <td style={{ fontWeight: "bold" }}>Deduction under section 80E</td>
-            <td>
-              <input
-                type="text"
-                name=""
-                id=""
-                value={deducitonValueE}
-                onChange={(e) => setDeductionValueE(e.target.value)}
-                placeholder="0"
-              />
-            </td>
-            <td>
-              <input type="text" name="" id="" value={0} />
-            </td>
-          </tr>
+					<tr>
+						<td style={{ fontWeight: 'bold' }}>Deduction under section 80E</td>
+						<td>
+							<input
+								type='text'
+								name=''
+								id=''
+								value={deducitonValueE}
+								onChange={(e) => setDeductionValueE(e.target.value)}
+								placeholder='0'
+							/>
+						</td>
+						<td>
+							<input type='text' name='' id='' value={0} />
+						</td>
+					</tr>
 
-          <tr>
-            <td> </td>{" "}
-            <td style={{ fontSize: "13px" }}>
-              Interest paid on education loan{" "}
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <button onClick={handleClick}> Calculate Tax </button>
-            </td>
-            <td></td>
-          </tr>
+					<tr>
+						<td> </td>{' '}
+						<td style={{ fontSize: '13px' }}>
+							Interest paid on education loan{' '}
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button onClick={handleClick}> Calculate Tax </button>
+						</td>
+						<td></td>
+					</tr>
 
           <tr>
             <td style={{ fontWeight: "bold" }}>

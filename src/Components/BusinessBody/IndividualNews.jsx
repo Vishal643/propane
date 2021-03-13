@@ -31,7 +31,19 @@ const IndividualNews = ({ data, type }) => {
 	const { searchArray } = useSelector((state) => state.search, shallowEqual);
 
 	React.useEffect(() => {
-		window.scrollTo(0,0)
+		window.scrollTo(0, 0);
+
+		//    if(type === "general"){
+		// 	dispatch(getBusinessApi());
+		//    }else if(type === "India"){
+		// 	dispatch(getBusinessIndia());
+		//    } else if(type === "International"){
+		// 	dispatch(getBusinessInternational());
+		//    }else{
+		// 		dispatch(getSearch(type));
+		//    }
+
+		document.title = 'Business News, Latest News';
 	}, []);
 
 	return (
