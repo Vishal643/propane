@@ -1,9 +1,7 @@
 .newsCard {
-    /* display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap; */
+   
     width: 45%;
-    /* height: 30%; */
+   
     border-bottom: 1px dotted grey; 
   
     margin-right: 4%;
