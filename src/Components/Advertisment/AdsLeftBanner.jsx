@@ -8,7 +8,7 @@ import {AdsBannerCard} from './AdsBannerCard'
 const AdsLeftBanner = () => {
     
     const dispatch = useDispatch();
-    const{isLoading,bannerStr,error} = useSelector((state) => state.AdsBanner , shallowEqual);
+    const{bannerStr,error} = useSelector((state) => state.AdsBanner , shallowEqual);
 
     
     

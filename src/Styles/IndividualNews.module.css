@@ -6,10 +6,8 @@
 }
 
 .individual_subWrapper{
-   
     width: 70%;
     margin: 7% auto;
-   
 }
 
 .individual_subWrapper>p:nth-of-type(1){
@@ -18,7 +16,6 @@
     letter-spacing: 2px;
     text-decoration: underline;
     margin-bottom: 2%;
-
 }
 .individual_subWrapper>p:nth-of-type(1):hover{
     text-decoration: none;
@@ -85,13 +82,12 @@
 }
 
 .individual_content_main>p:nth-of-type(2){
-
     margin: 40px auto 0px auto; 
     width:fit-content;
     font-weight: bolder;
     font-size: 15px;  
     color: gray;
-    padding: 0px 50px;
+    padding: 0px 30px;
     border-bottom: 1px solid rgb(211, 208, 208)
 }
 .individual_content_main>p>span{

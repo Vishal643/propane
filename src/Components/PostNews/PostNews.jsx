@@ -4,7 +4,7 @@ import { Editor } from 'react-draft-wysiwyg';
 import { convertToHTML } from 'draft-convert';
 import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-const PostStory2 = ({ handleDesc1 }) => {
+const PostNews = ({ handleDesc1 }) => {
 	const [editorState, setEditorState] = useState(() =>
 		EditorState.createEmpty()
 	);
@@ -31,4 +31,4 @@ const PostStory2 = ({ handleDesc1 }) => {
 		</div>
 	);
 };
-export { PostStory2 };
+export { PostNews };

@@ -7,7 +7,7 @@ import { fetchLoginData } from '../../Redux/login/action';
 import styles from '../../Styles/Login.module.css';
 import { AdsLeftBanner } from '../Advertisment/AdsLeftBanner';
 import { AdsRightBanner } from '../Advertisment/AdsRightBanner';
-import { duration } from '@material-ui/core';
+
 
 const Login = () => {
 	const dispatch = useDispatch();

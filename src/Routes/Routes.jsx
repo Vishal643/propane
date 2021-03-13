@@ -13,8 +13,8 @@ import { PrivateRoutes } from './PrivateRoutes';
 import Register from '../Components/RegisterPage/Register';
 import { NewTaxCalculator } from '../Components/TaxCalculation/NewTaxCalculator';
 import AllImports from '../Components/AllImports';
-import { PostStory1 } from '../Components/PostNews/PostStory1';
-import Login from '../Components/LoginPage/Login'
+import Login from '../Components/LoginPage/Login';
+import { PostData } from '../Components/PostNews/PostData';
 
 const Routes = () => {
 	const {
@@ -87,7 +87,7 @@ const Routes = () => {
 				<PrivateRoutes exact path='/' Mycomponent={AllImports} />
 
 				<Route path='/blogs' exact>
-					<PostStory1 />
+					<PostData />
 				</Route>
 				<Route>
 					<h1>Page not found?</h1>
