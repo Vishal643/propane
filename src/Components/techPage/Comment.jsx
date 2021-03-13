@@ -28,12 +28,13 @@ const Comment = ({ endPoint, id, title }) => {
 					marginLeft: '380px',
 					marginTop: '-48px',
 					position: 'absolute',
-					width: '500px',
+					width: '600px',
 					display: 'flex',
 				}}
 			>
-				<AdvertiseRight />
-				<AdvertiseRight />
+				{/* <AdvertiseRight />
+				<AdvertiseRight /> */}
+			<div style={{backgroundColor:"white", width:"100%", height:"95px", marginTop:"-50px"}}></div>
 			</div>
 		</>
 	);

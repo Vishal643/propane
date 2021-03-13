@@ -17,6 +17,7 @@ import { FaBookReader } from 'react-icons/fa';
 import { BsCalendar } from 'react-icons/bs';
 import { getSearch } from '../../Redux/SearchFunction/action';
 import Comment from '../techPage/Comment';
+import GridFooter from '../footerPage/GridFooter';
 
 const IndividualNews = ({ data, type }) => {
 	const { id } = useParams();
@@ -30,22 +31,12 @@ const IndividualNews = ({ data, type }) => {
 	const { searchArray } = useSelector((state) => state.search, shallowEqual);
 
 	React.useEffect(() => {
-		window.scrollTo(0, 0);
-
-		//    if(type === "general"){
-		// 	dispatch(getBusinessApi());
-		//    }else if(type === "India"){
-		// 	dispatch(getBusinessIndia());
-		//    } else if(type === "International"){
-		// 	dispatch(getBusinessInternational());
-		//    }else{
-		// 		dispatch(getSearch(type));
-		//    }
+		window.scrollTo(0,0)
 	}, []);
 
 	return (
 		<>
-			<BannerBusiness banner='https://tpc.googlesyndication.com/simgad/16057958619342960337?' />
+			<BannerBusiness banner='https://tpc.googlesyndication.com/simgad/17741213972995722021?' />
 			<SubNav />
 			<div className={styles.individual_wrapper}>
 				{data?.map(
@@ -74,7 +65,7 @@ const IndividualNews = ({ data, type }) => {
 			<h2
 				style={{
 					width: '70%',
-					margin: '70px auto 20px auto',
+					margin: '10px auto 20px auto',
 					textDecoration: 'underline',
 					color: 'gray',
 				}}
@@ -194,6 +185,10 @@ const IndividualNews = ({ data, type }) => {
 				</div>
 			)}
 			{/* </div> */}
+			<div style={{margin:"10% auto 0%", borderTop:"1px solid gray"}}>
+			<GridFooter  />
+		    </div>
+
 		</>
 	);
 };

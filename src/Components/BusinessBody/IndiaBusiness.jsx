@@ -3,6 +3,7 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getBusinessIndia } from '../../Redux/BusinessPage/action';
 import styles from '../../Styles/BusinessBody.module.css';
+import GridFooter from '../footerPage/GridFooter';
 import { BannerBusiness } from '../NavbarBusiness/BannerBusiness';
 import { SubNav } from '../NavbarBusiness/SubNav';
 
@@ -22,7 +23,7 @@ const IndiaBusiness = () => {
 		<>
 			<BannerBusiness banner='https://tpc.googlesyndication.com/simgad/16057958619342960337?' />
 			<SubNav />
-			<div>
+			<div  className={styles.business_wrapper}>
 				<div className={styles.business_head}>
 					<p>
 						INDIA BUSINESS <strong> NEWS </strong>
@@ -52,6 +53,8 @@ const IndiaBusiness = () => {
 					</div>
 				</div>
 			</div>
+			<GridFooter />
+
 		</>
 	);
 };
