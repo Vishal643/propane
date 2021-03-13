@@ -68,6 +68,7 @@ const TechPage = () => {
 	);
 	useEffect(() => {
 		dispatch(getTechNews(query));
+		document.title = 'Technology News, Latest News';
 	}, [query, dispatch]);
 
 	const seeIndivisualNews = (id) => {

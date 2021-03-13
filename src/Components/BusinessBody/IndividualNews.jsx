@@ -41,6 +41,8 @@ const IndividualNews = ({ data, type }) => {
 		//    }else{
 		// 		dispatch(getSearch(type));
 		//    }
+
+		document.title = 'Business News, Latest News';
 	}, []);
 
 	return (

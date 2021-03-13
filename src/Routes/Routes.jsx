@@ -83,7 +83,7 @@ const Routes = () => {
 
 				<PrivateRoutes exact path='/' Mycomponent={AllImports} />
 
-				<Route path='/city' exact>
+				<Route path='/blogs' exact>
 					<PostStory1 />
 				</Route>
 				<Route>

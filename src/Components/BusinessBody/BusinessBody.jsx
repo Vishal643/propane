@@ -8,7 +8,6 @@ import {
 } from '../../Redux/BusinessPage/action';
 import styles from '../../Styles/BusinessBody.module.css';
 
-
 const BusinessBody = () => {
 	const dispatch = useDispatch();
 	const { businessData, economyNews, businessIndia } = useSelector(
@@ -20,6 +19,7 @@ const BusinessBody = () => {
 		dispatch(getBusinessApi());
 		dispatch(getBusinessIndia());
 		dispatch(getBusinessInternational());
+		document.title = 'Business News, Latest News';
 	}, []);
 
 	return (
@@ -43,16 +43,18 @@ const BusinessBody = () => {
 					</div>
 
 					<div className={styles.business_newshead_wrapper}>
-						{businessData?.map((item, i) => (
-							i<5 &&
-							<div className={styles.business_news_head} key={item.id}>
-								<div>
-									<Link to={`/business/general/${item.id}`}>
-										{item.headline}
-									</Link>
-								</div>
-							</div>
-						))}
+						{businessData?.map(
+							(item, i) =>
+								i < 5 && (
+									<div className={styles.business_news_head} key={item.id}>
+										<div>
+											<Link to={`/business/general/${item.id}`}>
+												{item.headline}
+											</Link>
+										</div>
+									</div>
+								)
+						)}
 					</div>
 				</div>
 			</div>
@@ -78,20 +80,24 @@ const BusinessBody = () => {
 					</div>
 
 					<div className={styles.business_newshead_wrapper}>
-						{businessIndia?.map((item, i) => (
-							i<5 &&
-							<div className={styles.business_news_head} key={item.id}>
-								<div>
-									<Link to={`/business/india/${item.id}`}>{item.headline}</Link>
-								</div>
-							</div>
-						))}
+						{businessIndia?.map(
+							(item, i) =>
+								i < 5 && (
+									<div className={styles.business_news_head} key={item.id}>
+										<div>
+											<Link to={`/business/india/${item.id}`}>
+												{item.headline}
+											</Link>
+										</div>
+									</div>
+								)
+						)}
 					</div>
 				</div>
 			</div>
 
 			{/* International Business */}
-				
+
 			<div>
 				<div className={styles.business_head}>
 					<p>
@@ -115,16 +121,18 @@ const BusinessBody = () => {
 					</div>
 
 					<div className={styles.business_newshead_wrapper}>
-						{economyNews?.map((item, i) => (
-							i<5 &&
-							<div className={styles.business_news_head} key={item.id}>
-								<div>
-									<Link to={`/business/international/${item.id}`}>
-										{item.headline}
-									</Link>
-								</div>
-							</div>
-						))}
+						{economyNews?.map(
+							(item, i) =>
+								i < 5 && (
+									<div className={styles.business_news_head} key={item.id}>
+										<div>
+											<Link to={`/business/international/${item.id}`}>
+												{item.headline}
+											</Link>
+										</div>
+									</div>
+								)
+						)}
 					</div>
 				</div>
 			</div>

@@ -1,11 +1,8 @@
-
-
 .extraNewsPoints ul li {
-    font-size: small;
-    margin-bottom: 4%;
+	font-size: small;
+	margin-bottom: 4%;
 }
 
 .extraNewsPoints ul hr {
-   
-    border: 1px dotted grey;
+	border: 1px dotted grey;
 }

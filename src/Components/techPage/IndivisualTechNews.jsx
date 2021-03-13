@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
 import styles from '../../Styles/IndividualNews.module.css';
 import parse from 'html-react-parser';
@@ -56,6 +56,10 @@ const style = {
 };
 const IndividualTechNews = ({ data }) => {
 	const { id } = useParams();
+
+	useEffect(() => {
+		document.title = 'Technology News, Latest News';
+	}, []);
 	return (
 		<>
 			<HomePageHeader

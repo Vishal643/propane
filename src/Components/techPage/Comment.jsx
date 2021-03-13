@@ -23,18 +23,6 @@ const Comment = ({ endPoint, id, title }) => {
 					}}
 				/>
 			</DisqueComment>
-			<div
-				style={{
-					marginLeft: '380px',
-					marginTop: '-48px',
-					position: 'absolute',
-					width: '500px',
-					display: 'flex',
-				}}
-			>
-				<AdvertiseRight />
-				<AdvertiseRight />
-			</div>
 		</>
 	);
 };
