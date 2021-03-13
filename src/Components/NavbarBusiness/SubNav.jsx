@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillHome, AiOutlineSearch } from 'react-icons/ai';
-import {  NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import styles from '../../Styles/SubNav.module.css';
 // import { makeStyles } from '@material-ui/core/styles';
 import Popover from '@material-ui/core/Popover';
@@ -50,18 +50,54 @@ const SubNav = () => {
 			<div className={styles.subnav_wrapper}>
 				<div>
 					<p>
-						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white", padding:"2px"}} to='/' exact>
+						<NavLink
+							activeStyle={{
+								color: 'rgb(122, 7, 7) ',
+								backgroundColor: 'white',
+								padding: '2px',
+							}}
+							to='/'
+							exact
+						>
 							<AiFillHome />
 						</NavLink>
 					</p>
 					<p>
-						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white",  padding:"2px 5px"}} to='/business' exact>Business</NavLink>
+						<NavLink
+							activeStyle={{
+								color: 'rgb(122, 7, 7) ',
+								backgroundColor: 'white',
+								padding: '2px 5px',
+							}}
+							to='/business'
+							exact
+						>
+							Business
+						</NavLink>
 					</p>
 					<p>
-						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white", padding:"2px"}} to='/business/india-business' exact>India Business</NavLink>
+						<NavLink
+							activeStyle={{
+								color: 'rgb(122, 7, 7) ',
+								backgroundColor: 'white',
+								padding: '2px',
+							}}
+							to='/business/india-business'
+							exact
+						>
+							India Business
+						</NavLink>
 					</p>
 					<p>
-						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white", padding:"2px"}} to='/business/international-business' exact>
+						<NavLink
+							activeStyle={{
+								color: 'rgb(122, 7, 7) ',
+								backgroundColor: 'white',
+								padding: '2px',
+							}}
+							to='/business/international-business'
+							exact
+						>
 							International Business
 						</NavLink>
 					</p>
@@ -71,7 +107,17 @@ const SubNav = () => {
 					<p>GST</p>
 					<p>Budget</p>
 					<p>
-						<NavLink activeStyle={{color:"darkBlue" , backgroundColor:"white",padding:"2px"}} to='/tax-calculator' exact>Tax Calculator</NavLink>
+						<NavLink
+							activeStyle={{
+								color: 'rgb(122, 7, 7) ',
+								backgroundColor: 'white',
+								padding: '2px',
+							}}
+							to='/tax-calculator'
+							exact
+						>
+							Tax Calculator
+						</NavLink>
 					</p>
 					<p>FAQs</p>
 					<p>Banking</p>

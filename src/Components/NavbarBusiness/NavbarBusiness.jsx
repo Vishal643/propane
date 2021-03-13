@@ -11,7 +11,6 @@ const NavbarBusiness = () => {
 			<BannerBusiness banner='https://tpc.googlesyndication.com/simgad/17741213972995722021?' />
 			<SubNav />
 			<BusinessBody />
-			
 			<GridFooter />
 
 		

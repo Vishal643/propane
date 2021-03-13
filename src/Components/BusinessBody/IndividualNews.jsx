@@ -31,7 +31,6 @@ const IndividualNews = ({ data, type }) => {
 	const { searchArray } = useSelector((state) => state.search, shallowEqual);
 
 	React.useEffect(() => {
-<<<<<<< HEAD
 		window.scrollTo(0, 0);
 
 		//    if(type === "general"){
@@ -45,9 +44,6 @@ const IndividualNews = ({ data, type }) => {
 		//    }
 
 		document.title = 'Business News, Latest News';
-=======
-		window.scrollTo(0,0)
->>>>>>> 54059dc7731f5990a52e77e109f9303c46e74293
 	}, []);
 
 	return (

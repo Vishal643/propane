@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../Redux/TopContent/action';
 import { NewsCard } from './NewsCard';
-
+import { Ring } from 'react-awesome-spinners';
 const MainWrapper = styled.div`
 	width: 100%;
 	display: flex;
@@ -23,7 +23,11 @@ const TopContent = () => {
 
 	return (
 		<>
-			{isLoading && <h3>...Loading</h3>}
+			{isLoading && (
+				<div style={{ margin: '200px 600px' }}>
+					<Ring style={{ fontSize: '100px' }} />
+				</div>
+			)}
 			{error && <div>something went wrong</div>}
 			<MainWrapper>
 				{data?.map((item) => (

@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import styles from '../../Styles/SearchFunc.module.css';
 import { BannerBusiness } from '../NavbarBusiness/BannerBusiness';
 import { SubNav } from '../NavbarBusiness/SubNav';
-import {FaBookReader} from "react-icons/fa"
-import {BsCalendar} from "react-icons/bs"
+import { FaBookReader } from 'react-icons/fa';
+import { BsCalendar } from 'react-icons/bs';
 import GridFooter from '../footerPage/GridFooter';
+import { Ring } from 'react-awesome-spinners';
 
 const SearchFunc = () => {
 	const { find } = useParams();
@@ -43,7 +44,9 @@ const SearchFunc = () => {
 
 			<div className={styles.search_content_wrapper}>
 				{isSearching ? (
-					<div>...Loading</div>
+					<div style={{ margin: '200px 600px' }}>
+						<Ring style={{ fontSize: '100px' }} />
+					</div>
 				) : isError ? (
 					<div> Error 404</div>
 				) : searchArray.length === 0 ? (
@@ -51,15 +54,14 @@ const SearchFunc = () => {
 				) : (
 					searchArray
 						?.sort((a, b) => {
-						
 							if (order === 'oldest') {
-								return new Date(a.date) - new Date(b.date)
+								return new Date(a.date) - new Date(b.date);
 							} else if (order === 'latest') {
-								return new Date(b.date) - new Date(a.date)
+								return new Date(b.date) - new Date(a.date);
 							} else if (order === 'read') {
-								return b.readerCount-a.readerCount
-							}else{
-								return 
+								return b.readerCount - a.readerCount;
+							} else {
+								return;
 							}
 						})
 						.map((item, i) => (
@@ -68,20 +70,22 @@ const SearchFunc = () => {
 
 								<img src={item.image_link} alt='news pic' width='80%' />
 								<p>
-									<Link to={`/search/${find}/${item.id}`}>
-										{item.headline}
-									</Link>
+									<Link to={`/search/${find}/${item.id}`}>{item.headline}</Link>
 								</p>
-								<p><BsCalendar/> {item.date} <span> <FaBookReader/> {item.readerCount}</span></p>
-
+								<p>
+									<BsCalendar /> {item.date}{' '}
+									<span>
+										{' '}
+										<FaBookReader /> {item.readerCount}
+									</span>
+								</p>
 							</div>
 						))
 				)}
-
 			</div>
-			<div style={{margin:"10% auto 0%", borderTop:"1px solid gray"}}>
-			<GridFooter  />
-		    </div>
+			<div style={{ margin: '10% auto 0%', borderTop: '1px solid gray' }}>
+				<GridFooter />
+			</div>
 		</>
 	);
 };

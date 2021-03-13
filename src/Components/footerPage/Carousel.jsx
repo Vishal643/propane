@@ -13,11 +13,9 @@ const breakPoints = [
 function CarouselContainer() {
 	const Item = styled.div`
 		display: flex;
-		/* justify-content: center; */
-		/* align-items: center; */
 		height: 200px;
 		width: 100%;
-		/* background-color: #683bb7; */
+		background-color: none;
 		border: 1px solid #d1cdcd;
 		color: black;
 		margin: 15px;
@@ -60,7 +58,8 @@ function CarouselContainer() {
 						<h3>PRABAL BASU ROY</h3>
 						<br />
 						<p>
-							It's not just election alone: What the world's largest democracy can learn from the world's oldest democracy
+							It's not just election alone: What the world's largest democracy
+							can learn from the world's oldest democracy
 						</p>
 					</div>
 					<div>
@@ -76,7 +75,8 @@ function CarouselContainer() {
 						<h3>TOI EDIT</h3>
 						<br />
 						<p>
-							Quad summit: Delji must drop its hesitations about platforms that push back against Beijing
+							Quad summit: Delji must drop its hesitations about platforms that
+							push back against Beijing
 						</p>
 					</div>
 					<div>
@@ -92,7 +92,8 @@ function CarouselContainer() {
 						<h3>FREE AIR</h3>
 						<br />
 						<p>
-						What India's Supreme Court said in 1950, on sedition and freedom of expression
+							What India's Supreme Court said in 1950, on sedition and freedom
+							of expression
 						</p>
 					</div>
 					<div>
@@ -108,7 +109,8 @@ function CarouselContainer() {
 						<h3>TOI EDIT</h3>
 						<br />
 						<p>
-							How to keep FIT: FLexible inflation targeting has worked. We must stick to the 4% target
+							How to keep FIT: FLexible inflation targeting has worked. We must
+							stick to the 4% target
 						</p>
 					</div>
 					<div>
@@ -124,7 +126,8 @@ function CarouselContainer() {
 						<h3>JUG SURAIYA</h3>
 						<br />
 						<p>
-							Home truths: A contoversial medical treatment which had been known to cure even sceptics
+							Home truths: A contoversial medical treatment which had been known
+							to cure even sceptics
 						</p>
 					</div>
 					<div>
@@ -140,7 +143,8 @@ function CarouselContainer() {
 						<h3>FREE TO AIR</h3>
 						<br />
 						<p>
-							Overall, the film remains true to its genre and packs a good dose of entertainment, which makes it worth a trip to the theatre
+							Overall, the film remains true to its genre and packs a good dose
+							of entertainment, which makes it worth a trip to the theatre
 						</p>
 					</div>
 					<div>
@@ -156,7 +160,8 @@ function CarouselContainer() {
 						<h3>TOI EDIT</h3>
 						<br />
 						<p>
-							Overall, it's a novel idea with a fresh and breezy storyline that has its moments. But with more depth and soul
+							Overall, it's a novel idea with a fresh and breezy storyline that
+							has its moments. But with more depth and soul
 						</p>
 					</div>
 					<div>

@@ -4,6 +4,7 @@ import styles from '../../Styles/TechPage.module.css';
 import { BsChevronRight } from 'react-icons/all';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import { Ring } from 'react-awesome-spinners';
 import {
 	getTechNews,
 	getIndivisualNewsData,
@@ -76,7 +77,9 @@ const TechPage = () => {
 		history.push(`/tech/${id}`);
 	};
 	return isLoading ? (
-		<div>Loading...</div>
+		<div style={{ margin: '200px 600px' }}>
+			<Ring style={{ fontSize: '100px' }} />
+		</div>
 	) : isError ? (
 		<div>Somwthing Went Wrong</div>
 	) : (

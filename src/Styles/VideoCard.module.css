@@ -1,13 +1,15 @@
-.videoCard div img{
-   width: 80%;
-   border-radius: 4%;
+.videoCard div img {
+	width: 80%;
+	border-radius: 4%;
+	margin-bottom: 5px;
 }
 
 .videoCard div p {
-    font-size: 15px;
-    margin-top: 0px;
+	font-size: 15px;
+	margin-top: 0px;
+	margin-bottom: 15px;
 }
 
 .videoCard {
-    padding-left: 2%;
+	padding-left: 2%;
 }
