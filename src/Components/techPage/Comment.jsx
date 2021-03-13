@@ -34,7 +34,7 @@ const Comment = ({ endPoint, id, title }) => {
 			>
 				{/* <AdvertiseRight />
 				<AdvertiseRight /> */}
-			<div style={{backgroundColor:"white", width:"100%", height:"95px", marginTop:"-50px"}}></div>
+			{/* <div style={{backgroundColor:"black", width:"100%", height:"50px", marginTop:"-5px"}}></div> */}
 			</div>
 		</>
 	);
