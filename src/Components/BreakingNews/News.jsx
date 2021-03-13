@@ -36,8 +36,8 @@ const News = () => {
         {data?.map((item) => (
           <div>
             <div>
-              <Link to={`/breakingnews/${item.id}`}>
-                <Temp {...item} key={item.id} />
+              <Link to={`/breakingnews/${item.id}`}> 
+                <Temp {...item} key={item.id} /> 
               </Link>
             </div>
           </div>

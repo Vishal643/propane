@@ -1,6 +1,13 @@
-import React from "react";
+import React from 'react';
+import { CarouselContainer } from '../footerPage/Carousel';
+import GridFooter from '../footerPage/GridFooter';
 import styled from "styled-components";
 import { News } from "../BreakingNews/News";
+import { AdvertiseRight } from "../Advertisment/AdvertiseRight"
+import { AdsRightBanner} from '../Advertisment/AdsRightBanner';
+import { BannerBusiness } from '../NavbarBusiness/BannerBusiness';
+import { SubNav } from '../NavbarBusiness/SubNav';
+
 
 export const NewTaxCalculator = () => {
   const [income, setIncome] = React.useState("");
@@ -51,7 +58,7 @@ export const NewTaxCalculator = () => {
       tax = 0;
     } else if (amount > 250000 && amount <= 500000) {
       tax = (amount - 250000) * 0.5;
-      console.log(tax);
+      // console.log(tax);
     } else if (amount > 500000 && amount <= 750000) {
       tax = 12500 + (amount - 500000) * 0.1;
       total = (tax * 4) / 100;
@@ -94,17 +101,22 @@ export const NewTaxCalculator = () => {
       Number(deducitonValueD) +
       Number(deducitonValueE);
     console.log(exemption);
+
+
     if (amount < 250000) {
       Oldtax = 0;
-    } else if (amount > 250000 && amount <= 500000) {
-      Oldtax = (amount - 250000) * 0.5;
+
+    }
+     else if (amount > 250000 && amount <= 500000) {
+      Oldtax = 12500 + (amount - 250000) * 0.5;
+      oldtotal = Oldtax * 0.4;
       // console.log(Oldtax);
     } else if (amount > 500000 && amount <= 1000000) {
-      Oldtax = 63000 + (amount - 500000) * 0.2;
+      Oldtax = 100000 +(amount - 500000) * 0.2;
       oldtotal = Oldtax * 0.4;
       // console.log(Oldtax);
     } else if (amount > 1000000) {
-      Oldtax = 75000 + (amount - 1000000) * 0.3;
+      Oldtax = (amount - 1000000) * 0.3;
       oldtotal = Oldtax * 0.4;
       // console.log(Oldtax);
     }
@@ -120,13 +132,19 @@ export const NewTaxCalculator = () => {
 
   return (
     <>
+   <BannerBusiness banner='https://tpc.googlesyndication.com/simgad/16057958619342960337?' />
+            <SubNav />
       <News />
-      {/* <BannerBusiness /> */}
-      {/* <NavbarBusiness/> */}
+
+      {/* <BannerBusiness /> 
+      <NavbarBusiness/> */}
+        <AdsRightBanner/>
+  
       <Wrapper>
+  
         <h1>INCOME TAX CALCULATOR</h1>
         <table style={{ margin: "auto" }}>
-          <tr style={{ fontWeight: "bold" }}>
+          <tr style={{ fontWeight: "bold" ,fontSize:"20px"}}>
             <td>Financial Year</td>
             <td> 2020 - 21 EXISTING TAX SLAB</td>
             <td> 2020 - 21 NEW TAX REGIME</td>
@@ -281,6 +299,7 @@ export const NewTaxCalculator = () => {
               {" "}
               <input type="text" id="Oldtax" value={taxOldValue} />
             </td>
+            <td></td>
           </tr>
           <tr>
             <td style={{ fontWeight: "bold" }}>
@@ -291,31 +310,44 @@ export const NewTaxCalculator = () => {
               {" "}
               <input type="text" id="tax" value={taxNewValue} />
             </td>
+            <td></td>
           </tr>
         </table>
+      
+        {/* <AdvertiseRight /> */}
       </Wrapper>
+      
 
       {displayState ? (
-        <p style={{ color: "green", fontSize: "25px", textAlign: "center" }}>
+        <p style={{  color: "Teal", fontSize: "35px", textAlign: "center", marginTop:"50px",fontWeight:"bold" }}>
           {" "}
-          You will now save {finalVal} if you opt for the new tax regime.{" "}
+          You will now save {finalVal} if you opt for the new tax.{" "}
         </p>
-      ) : (
-        <p style={{ color: "green", fontSize: "25px", textAlign: "center" }}>
-          You will pay more tax than old regime {finalVal}
+      ) : (        <p style={{ color: "teal", fontSize: "35px", textAlign: "center", marginTop:"50px",fontWeight:"bold" }}>
+          You will pay more tax than old tax. {finalVal}
         </p>
       )}
+
+<img src="https://i.postimg.cc/ZqyGK87D/Capture.png" alt="incometax" style={{marginTop:"50px",marginLeft:"250px", width:"60%"  }}/>
+<CarouselContainer />
+			<GridFooter />
     </>
   );
 };
 
 const Wrapper = styled.div`
   width: 80%;
-  margin-left: 120px;
+  margin-left: 170px;
   /* border:1px solid; */
   font-size: 18px;
+  margin-top:-450px;
+  font-family:"Roboto, sans-serif"
+  
   > div {
     margin-left: 40px;
+  }
+  table{
+    border-collapse:collapse;
   }
   input {
     width: 300px;
@@ -325,27 +357,34 @@ const Wrapper = styled.div`
   }
   tr td {
     width: 300px;
-    /* border:1px solid blue; */
+    border-collapse:collapse;
     margin: 40px;
     padding: 20px;
+    /* box-shadow:30px 40px 50px #f1f3ef; */
+    color:black;
+    background-color: #999898;
   }
 
   button {
     color: white;
     width: 320px;
     height: 50px;
-    background-color: #6464e0;
+    background-color: #5c0808;
     font-size: 25px;
     border: none;
   }
   button:focus {
     border: none;
+    outline:none;
   }
   #income {
     margin-left: 130px;
   }
   h1 {
     text-align: center;
-    color: #6c6ceb;
+    color: #020294;
+    margin-bottom:50px;
+    font-size:40px;
+    border-bottom:3px solid ;
   }
 `;

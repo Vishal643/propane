@@ -7,13 +7,16 @@ import { IoLogoYoutube } from "react-icons/io";
 
 const GridFooter = () => {
   const FooterContainer = styled.div`
-    width: 80%;
+    width: 90%;
     display: grid;
     grid-column-gap: 50px;
     padding: 15px;
     margin-left: 7%;
     border-bottom: 1px dotted black;
-
+    margin-top:50px;
+    ul{
+      margin-top:10px;
+    }
     li {
       list-style-type: none;
       padding: 10px;
@@ -22,6 +25,8 @@ const GridFooter = () => {
     h6 {
       margin-left: 12px;
       margin-left: 50px;
+      /* margin-top:10px;
+      margin-bottom:10px; */
     }
     @font-face {
       font-family: "Montserrat", sans-serif;
@@ -93,7 +98,7 @@ const GridFooter = () => {
             <img
               src="https://static.toiimg.com/photo/71215965.cms"
               alt="TOI"
-              style={{ width: "", height: "60px", marginLeft: "50px" }}
+              style={{ width: "", height: "60px", marginLeft: "50px" , marginTop:"-30px"}}
             />
 
             <ul>
@@ -132,7 +137,7 @@ const GridFooter = () => {
               <li>World News</li>
             </ul>
           </div>
-          <div style={{ float: "left", width: "50%", marginTop: "40px" }}>
+          <div style={{ float: "left", width: "50%", marginTop: "20px" }}>
             <ul>
               <li>Bollywood News</li>
               <li>Health & Fitness tips</li>
@@ -153,7 +158,7 @@ const GridFooter = () => {
               <li>Celebrities Newborn Babies</li>
             </ul>
           </div>
-          <div style={{ marginTop: "40px", float: "left" }}>
+          <div style={{ marginTop: "10px", float: "left" }}>
             <ul>
               <li>Rubina Dilaik</li>
               <li>Weight Loss Side Effects</li>
@@ -164,13 +169,14 @@ const GridFooter = () => {
           </div>
         </FooterContainer3>
         <FooterContainer4>
-          <div style={{ height: "50px" }}>
+          <div style={{ height: "50px" , marginTop:"50px" }}>
             <h6>FOLLOW US ON </h6>
             <div
               style={{
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "space-evenly",
+                marginTop:"50px"
               }}
             >
               <FaFacebookF
@@ -227,7 +233,7 @@ const GridFooter = () => {
               <li> Assam opinion polls</li>
             </ul>
           </div>
-          <div style={{ marginTop: "40px", float: "left" }}>
+          <div style={{ marginTop: "10px", float: "left" }}>
             <ul>
               <li>Thane lockdown</li>
               <li>Covid 19 vaccine India</li>
@@ -255,7 +261,7 @@ const GridFooter = () => {
               <li>Navya Naveli Nanda</li>
             </ul>
           </div>
-          <div style={{ float: "left", marginTop: "30px" }}>
+          <div style={{ float: "left", marginTop: "10px" }}>
             <ul>
               <li>Kangana Ranaut</li>
               <li>Katrina Kaif</li>
@@ -284,7 +290,7 @@ const GridFooter = () => {
               <li>Ei Samay</li>
             </ul>
           </div>
-          <div style={{ marginTop: "40px", float: "left" }}>
+          <div style={{ marginTop: "20px", float: "left" }}>
             <ul>
               <li>I am Gujarat</li>
               <li>Times Now</li>
@@ -308,7 +314,7 @@ const GridFooter = () => {
               <li>ETimes</li>
             </ul>
           </div>
-          <div style={{ marginTop: "40px", float: "left" }}>
+          <div style={{ marginTop: "20px", float: "left" }}>
             <ul>
               <li>Filmfare</li>
               <li>Online Songs</li>
@@ -327,7 +333,7 @@ const GridFooter = () => {
               <li>ETimes</li>
             </ul>
           </div>
-          <div style={{ marginTop: "40px", float: "left" }}>
+          <div style={{ marginTop: "20px", float: "left" }}>
             <ul>
               <li>Filmfare</li>
               <li>Online Songs</li>

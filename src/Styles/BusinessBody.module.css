@@ -1,8 +1,14 @@
+.business_wrapper{
+    padding-bottom: 5%;
+    border-bottom: 1px solid gray;
+    /* background-color: blanchedalmond; */
+}
+
 .business_head, .business_news_wrapper{
    display: flex ;
    flex-wrap: wrap;
    width: 80%;
-   margin: 20px auto;
+   margin: 40px auto;
    font-family: sans-serif;
    font-size: 20px;
    /* background-color: rgb(186, 186, 226); */
@@ -12,7 +18,7 @@
     height:2px;
     width: 75%;
     margin-left: 1%;
-    margin-top: 30px;
+    margin-top: 10px;
 
 }
 .business_news_main{
@@ -31,7 +37,7 @@
     color: white;
     font-weight: bold;
     font-size: 20px;
-    top:60%;
+    top:75%;
     left: 2%;
     width: 100%;
 

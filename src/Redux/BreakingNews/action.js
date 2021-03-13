@@ -30,7 +30,7 @@ const fetchData = (params) => (dispatch) => {
     .get(
       "https://fake-mocker.herokuapp.com/general_business_news",{
         params:{
-          _limit:3
+          _limit:1
         }
       }
     )
