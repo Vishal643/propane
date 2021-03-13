@@ -57,11 +57,10 @@ function CarouselContainer() {
 				</Item>
 				<Item>
 					<div>
-						<h3>KRISHNAMURTHY SUBRAMANINAN</h3>
+						<h3>PRABAL BASU ROY</h3>
 						<br />
 						<p>
-							West cares only about itself: We don’t have to pay any attention
-							to what the West is saying about us
+							It's not just election alone: What the world's largest democracy can learn from the world's oldest democracy
 						</p>
 					</div>
 					<div>
@@ -74,11 +73,10 @@ function CarouselContainer() {
 
 				<Item>
 					<div>
-						<h3>KRISHNAMURTHY SUBRAMANINAN</h3>
+						<h3>TOI EDIT</h3>
 						<br />
 						<p>
-							West cares only about itself: We don’t have to pay any attention
-							to what the West is saying about us
+							Quad summit: Delji must drop its hesitations about platforms that push back against Beijing
 						</p>
 					</div>
 					<div>
@@ -91,11 +89,10 @@ function CarouselContainer() {
 
 				<Item>
 					<div>
-						<h3>KRISHNAMURTHY SUBRAMANINAN</h3>
+						<h3>FREE AIR</h3>
 						<br />
 						<p>
-							West cares only about itself: We don’t have to pay any attention
-							to what the West is saying about us
+						What India's Supreme Court said in 1950, on sedition and freedom of expression
 						</p>
 					</div>
 					<div>
@@ -108,11 +105,10 @@ function CarouselContainer() {
 
 				<Item>
 					<div>
-						<h3>KRISHNAMURTHY SUBRAMANINAN</h3>
+						<h3>TOI EDIT</h3>
 						<br />
 						<p>
-							West cares only about itself: We don’t have to pay any attention
-							to what the West is saying about us
+							How to keep FIT: FLexible inflation targeting has worked. We must stick to the 4% target
 						</p>
 					</div>
 					<div>
@@ -125,11 +121,10 @@ function CarouselContainer() {
 
 				<Item>
 					<div>
-						<h3>KRISHNAMURTHY SUBRAMANINAN</h3>
+						<h3>JUG SURAIYA</h3>
 						<br />
 						<p>
-							West cares only about itself: We don’t have to pay any attention
-							to what the West is saying about us
+							Home truths: A contoversial medical treatment which had been known to cure even sceptics
 						</p>
 					</div>
 					<div>
@@ -142,11 +137,10 @@ function CarouselContainer() {
 
 				<Item>
 					<div>
-						<h3>KRISHNAMURTHY SUBRAMANINAN</h3>
+						<h3>FREE TO AIR</h3>
 						<br />
 						<p>
-							West cares only about itself: We don’t have to pay any attention
-							to what the West is saying about us
+							Overall, the film remains true to its genre and packs a good dose of entertainment, which makes it worth a trip to the theatre
 						</p>
 					</div>
 					<div>
@@ -159,11 +153,10 @@ function CarouselContainer() {
 
 				<Item>
 					<div>
-						<h3>KRISHNAMURTHY SUBRAMANINAN</h3>
+						<h3>TOI EDIT</h3>
 						<br />
 						<p>
-							West cares only about itself: We don’t have to pay any attention
-							to what the West is saying about us
+							Overall, it's a novel idea with a fresh and breezy storyline that has its moments. But with more depth and soul
 						</p>
 					</div>
 					<div>

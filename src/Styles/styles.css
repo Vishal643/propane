@@ -41,7 +41,7 @@ button.rec-dot{
     justify-content: center;
     background-color: rgb(124, 22, 8);
     margin-top: 30px; 
-    width: 450px;
+    width: 1350px;
    
   }
   
@@ -56,7 +56,7 @@ button.rec-dot{
   }
   
   .marquee-content {
-    animation-duration: 6s;
+    animation-duration: 20s;
     animation-name: marquee;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
