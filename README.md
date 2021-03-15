@@ -54,5 +54,25 @@ First you have to clone the reposiroty into the local system and use npm install
 
 # Glimpse of Our Work :-
 
+## Login Page: -
+![login Page](https://github.com/Vishal643/propane/blob/main/public/assets/LoginPage.png)
+
 ## Home Page: -
-![Home_Page]()
+![Home_Page1](https://github.com/Vishal643/propane/blob/main/public/assets/HomePage1.png)
+![Home Page2](https://github.com/Vishal643/propane/blob/main/public/assets/HomePage2.png)
+![Home Page3](https://github.com/Vishal643/propane/blob/main/public/assets/HomePage3.png)
+
+## Business Page: - 
+![Business Page1](https://github.com/Vishal643/propane/blob/main/public/assets/BusinessPage1.png)
+![Business Page2](https://github.com/Vishal643/propane/blob/main/public/assets/BusinessPage2.png)
+![IndiaBusinessPage](https://github.com/Vishal643/propane/blob/main/public/assets/IndiaBusinessPage.png)
+
+## Indivisual News, Related News and Comments: - 
+![Indivisual News Related News and Comments](https://github.com/Vishal643/propane/blob/main/public/assets/IndivisulaNewsAndComment.png)
+
+## Tax Calculation Page: - 
+![Tax Calculation Page](https://github.com/Vishal643/propane/blob/main/public/assets/Tax-Calculationpage.png) 
+
+## Tech Page: - 
+![Tech Page1](https://github.com/Vishal643/propane/blob/main/public/assets/TachPage1.png)
+![Tech Page2](https://github.com/Vishal643/propane/blob/main/public/assets/TechPage2.png)
