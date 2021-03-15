@@ -4,7 +4,7 @@
 
 # Team Members: -
   1. Divya Prakash
-  2. Gayathri
+  2. Gayathry JM
   3. Pavithra N
   4. Vishal Kumar
 
