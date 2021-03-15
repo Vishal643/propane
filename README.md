@@ -67,8 +67,8 @@
 ![Business Page2](https://github.com/Vishal643/propane/blob/main/public/assets/BusinessPage2.png)
 ![IndiaBusinessPage](https://github.com/Vishal643/propane/blob/main/public/assets/IndiaBusinessPage.png)
 
-## Indivisual News, Related News and Comments: - 
-![Indivisual News Related News and Comments](https://github.com/Vishal643/propane/blob/main/public/assets/IndivisulaNewsAndComment.png)
+## Individual News, Related News and Comments: - 
+![Individual News Related News and Comments](https://github.com/Vishal643/propane/blob/main/public/assets/IndivisulaNewsAndComment.png)
 
 ## Tax Calculation Page: - 
 ![Tax Calculation Page](https://github.com/Vishal643/propane/blob/main/public/assets/Tax-Calculationpage.png) 
