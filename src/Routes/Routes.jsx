@@ -89,6 +89,7 @@ const Routes = () => {
 				<Route path='/blogs' exact>
 					<PostData />
 				</Route>
+
 				<Route>
 					<h1>Page not found?</h1>
 				</Route>
