@@ -43,7 +43,7 @@
 
 
 # Installation:-
-### First you have to clone the reposiroty into the local system and use npm install so it will install all the necessary packages which are needed to run the project.
+### First you have to clone the repository into the local system and use npm install so it will install all the necessary packages which are needed to run the project.
 
 # Usage:-
 ### Use npm start to run the project then click on the sign in button on the top right cornor. It will take you to register page after registering you will be        redirected to login page from there you can Navigate the below mentioned routes: -
