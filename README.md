@@ -46,7 +46,7 @@
 ### First you have to clone the repository into the local system and use npm install so it will install all the necessary packages which are needed to run the project.
 
 # Usage:-
-### Use npm start to run the project then click on the sign in button on the top right cornor. It will take you to register page after registering you will be        redirected to login page from there you can Navigate the below mentioned routes: -
+### Use npm start to run the project then click on the sign in button on the top right corner. It will take you to register page after registering you will be        redirected to login page from there you can Navigate the below mentioned routes: -
   1.  Click on Business it will take you to  business page.
   2.  On business page you can navigate India Business, international Business, General Business and Tax-Calculation Page.
   3. From Home Page you can click on Tech to navigate tech page.
