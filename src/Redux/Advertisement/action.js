@@ -36,7 +36,7 @@ const getRandomSuccess = (id, img) => {
 const fetchAdv = (params) => (dispatch) => {
 	dispatch(getAdvRequest());
 	return axios
-		.get('https://fake-mocker.herokuapp.com/advertisement')
+		.get('https://toi-database.herokuapp.com/advertisement')
 		.then((res) => {
 			console.log(res);
 			const getAdvSuccessAction = getAdvSuccess(res.data);
@@ -51,7 +51,7 @@ const fetchAdv = (params) => (dispatch) => {
 const fetchAdvById = (id) => (dispatch) => {
 	dispatch(getAdvRequest());
 	return axios
-		.get(`https://fake-mocker.herokuapp.com/advertisement/${id}`)
+		.get(`https://toi-database.herokuapp.com/advertisement/${id}`)
 		.then((res) => {
 			console.log(res);
 			const { id, img } = res.data;
