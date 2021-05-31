@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '../../Styles/PostStory1.module.css';
+import styles from '../../Styles/PostData.module.css';
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 import MessageIcon from '@material-ui/icons/Message';
 import ImageIcon from '@material-ui/icons/Image';
 import { toast } from 'react-toastify';
-import { PostStory2 } from './PostStory2';
+import { PostNews } from './PostNews';
 
-const PostStory1 = () => {
+const PostData = () => {
 	const communityList = [
 		'indian_tech_news',
 		'us_tech_news',
@@ -117,7 +117,7 @@ const PostStory1 = () => {
 								onChange={(e) => setTitle1(e.target.value)}
 							/>
 							<div>
-								<PostStory2 handleDesc1={handleDesc1} />
+								<PostNews handleDesc1={handleDesc1} />
 							</div>
 							<button
 								className={styles.publish_news_btn}
@@ -150,4 +150,4 @@ const PostStory1 = () => {
 	);
 };
 
-export { PostStory1 };
+export { PostData };
