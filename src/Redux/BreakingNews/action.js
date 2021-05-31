@@ -28,7 +28,7 @@ const fetchData = (params) => (dispatch) => {
   dispatch(getDataRequest());
   axios
     .get(
-      "https://fake-mocker.herokuapp.com/general_business_news",{
+      "https://toi-database.herokuapp.com/general_business_news",{
         params:{
           _limit:1
         }

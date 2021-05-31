@@ -38,7 +38,7 @@ const getBannerSuccess = (id, img) => {
 const fetchAdsBannerById = (id) => (dispatch) => {
 	dispatch(getAdsRequest());
 	return axios
-		.get(`https://fake-mocker.herokuapp.com/adsCorner/${id}`)
+		.get(`https://toi-database.herokuapp.com/adsCorner/${id}`)
 		.then((res) => {
 			console.log(res);
 			const { id, img } = res.data;

@@ -52,7 +52,7 @@ const getBusinessApi=(params)=>(dispatch)=>{
 
     dispatch(getBusinessRequest())
 
-    return axios.get("https://fake-mocker.herokuapp.com/general_business_news"
+    return axios.get("https://toi-database.herokuapp.com/general_business_news"
     ).then((res)=>dispatch(getBusinessSuccess(res.data, 'general') ) )
     .catch((err)=>dispatch(getBusinessFailure() ))
 }
@@ -63,7 +63,7 @@ const getBusinessIndia=(params)=>(dispatch)=>{
 
     dispatch(getBusinessIndiaReq())
 
-    return axios.get("https://fake-mocker.herokuapp.com/indian_business_news"
+    return axios.get("https://toi-database.herokuapp.com/indian_business_news"
     ).then((res)=>dispatch( getBusinessIndiaSuccess(res.data, 'India') ) )
     .catch((err)=>dispatch( getBusinessIndiaFailure() ))
 
@@ -73,7 +73,7 @@ const getBusinessInternational=(params)=>(dispatch)=>{
 
     // dispatch(getBusinessIndiaReq())
 
-    return axios.get("https://fake-mocker.herokuapp.com/international_business_news"
+    return axios.get("https://toi-database.herokuapp.com/international_business_news"
     ).then((res)=>dispatch( getBusinessInternationalSuccess(res.data, 'International') ) )
     .catch((err)=> console.log(err))
 

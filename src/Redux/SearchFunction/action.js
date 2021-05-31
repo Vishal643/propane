@@ -24,7 +24,7 @@ const getSearch=(query)=>(dispatch)=>{
 
     dispatch( getSearchRequest() )
 
-    return axios.get("https://fake-mocker.herokuapp.com/all_news",{
+    return axios.get("https://toi-database.herokuapp.com/all_news",{
         params:{
             q : query
         }
