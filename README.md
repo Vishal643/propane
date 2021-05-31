@@ -33,12 +33,12 @@
   6. draft-convert
   7. draft-js
   8. react
-  9.react-draft-wysiwyg
-  10.react-redux
-  11.react-router-dom
-  12.redux
-  13.redux-thunk
-  14.uuid
+  9. react-draft-wysiwyg
+  10. react-redux
+  11. react-router-dom
+  12. redux
+  13. redux-thunk
+  14. uuid
 
 
 # Installation:-
