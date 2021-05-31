@@ -28,11 +28,11 @@ const fetchData = (params) => (dispatch) => {
 	dispatch(getDataRequest());
 	axios
 		.get(
-			'http://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=f0ce44cfd85e4634beb89c16b71e569b'
+			'https://toi-database.herokuapp.com/top_news'
 		)
 		.then((res) => {
-			const getDataSuccessAction = getDataSuccess(res.data.articles);
-			console.log(res.data.articles);
+			const getDataSuccessAction = getDataSuccess(res.data);
+			
 			dispatch(getDataSuccessAction);
 		})
 		.catch((err) => {
