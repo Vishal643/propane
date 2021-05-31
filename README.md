@@ -30,16 +30,15 @@
   3. Ant design
   4. Axios
   5. React-Redux
-  6. ompurify
-  7. draft-convert
-  8. draft-js
-  9. react
-  10.react-draft-wysiwyg
-  11.react-redux
-  12.react-router-dom
-  13.redux
-  14.redux-thunk
-  15.uuid
+  6. draft-convert
+  7. draft-js
+  8. react
+  9.react-draft-wysiwyg
+  10.react-redux
+  11.react-router-dom
+  12.redux
+  13.redux-thunk
+  14.uuid
 
 
 # Installation:-
