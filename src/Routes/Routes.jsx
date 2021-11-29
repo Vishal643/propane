@@ -17,21 +17,15 @@ import Login from '../Components/LoginPage/Login';
 import { PostData } from '../Components/PostNews/PostData';
 
 const Routes = () => {
-	const {
-		businessData,
-		businessIndia,
-		economyNews,
-		typeGen,
-		typeIn,
-		typeInt,
-	} = useSelector((state) => state.business, shallowEqual);
+	const { businessData, businessIndia, economyNews, typeGen, typeIn, typeInt } =
+		useSelector((state) => state.business, shallowEqual);
 	const { indivisualNews } = useSelector(
 		(state) => state.techReducer,
-		shallowEqual
+		shallowEqual,
 	);
 	const { searchArray, finding } = useSelector(
 		(state) => state.search,
-		shallowEqual
+		shallowEqual,
 	);
 	return (
 		<div>

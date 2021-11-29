@@ -36,7 +36,7 @@ const getRandomSuccess = (id, img) => {
 const fetchAdv = (params) => (dispatch) => {
 	dispatch(getAdvRequest());
 	return axios
-		.get('https://toi-database.herokuapp.com/advertisement')
+		.get('https://vishal-s-json-server.herokuapp.com/advertisement')
 		.then((res) => {
 			console.log(res);
 			const getAdvSuccessAction = getAdvSuccess(res.data);
@@ -51,7 +51,7 @@ const fetchAdv = (params) => (dispatch) => {
 const fetchAdvById = (id) => (dispatch) => {
 	dispatch(getAdvRequest());
 	return axios
-		.get(`https://toi-database.herokuapp.com/advertisement/${id}`)
+		.get(`https://vishal-s-json-server.herokuapp.com/advertisement/${id}`)
 		.then((res) => {
 			console.log(res);
 			const { id, img } = res.data;
@@ -63,8 +63,5 @@ const fetchAdvById = (id) => (dispatch) => {
 			dispatch(getAdvFailure());
 		});
 };
-
-
-
 
 export { fetchAdv, fetchAdvById };

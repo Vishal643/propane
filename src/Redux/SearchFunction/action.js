@@ -1,35 +1,40 @@
-import axios from "axios"
-import {GET_SEARCH_REQUEST, GET_SEARCH_SUCCESS, GET_SEARCH_FAILURE} from "./actionTypes"
+import axios from 'axios';
+import {
+	GET_SEARCH_REQUEST,
+	GET_SEARCH_SUCCESS,
+	GET_SEARCH_FAILURE,
+} from './actionTypes';
 
-const getSearchRequest =()=>{
-    return{
-        type:GET_SEARCH_REQUEST
-    }
-}
+const getSearchRequest = () => {
+	return {
+		type: GET_SEARCH_REQUEST,
+	};
+};
 
-const getSearchSuccess =(res, query)=>{
-    return{
-        type: GET_SEARCH_SUCCESS,
-        payload :{res, query}
-    }
-}
+const getSearchSuccess = (res, query) => {
+	return {
+		type: GET_SEARCH_SUCCESS,
+		payload: { res, query },
+	};
+};
 
-const getSearchFailure=()=>{
-    return{
-        type: GET_SEARCH_FAILURE
-    }
-}
+const getSearchFailure = () => {
+	return {
+		type: GET_SEARCH_FAILURE,
+	};
+};
 
-const getSearch=(query)=>(dispatch)=>{
+const getSearch = (query) => (dispatch) => {
+	dispatch(getSearchRequest());
 
-    dispatch( getSearchRequest() )
+	return axios
+		.get('https://vishal-s-json-server.herokuapp.com/all_news', {
+			params: {
+				q: query,
+			},
+		})
+		.then((res) => dispatch(getSearchSuccess(res.data, query)))
+		.catch((err) => dispatch(getSearchFailure()));
+};
 
-    return axios.get("https://toi-database.herokuapp.com/all_news",{
-        params:{
-            q : query
-        }
-    }).then((res)=>dispatch( getSearchSuccess(res.data, query) ))
-    .catch((err)=>dispatch( getSearchFailure() ))
-}
-
-export {getSearch}
+export { getSearch };

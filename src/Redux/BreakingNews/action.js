@@ -1,47 +1,45 @@
-import axios from "axios";
+import axios from 'axios';
 import {
-  GET_DATA_FAILURE,
-  GET_DATA_REQUEST,
-  GET_DATA_SUCCESS,
-} from "./actionType";
+	GET_DATA_FAILURE,
+	GET_DATA_REQUEST,
+	GET_DATA_SUCCESS,
+} from './actionType';
 
 const getDataRequest = () => {
-  return {
-    type: GET_DATA_REQUEST,
-  };
+	return {
+		type: GET_DATA_REQUEST,
+	};
 };
 
 const getDataSuccess = (payload) => {
-  return {
-    type: GET_DATA_SUCCESS,
-    payload,
-  };
+	return {
+		type: GET_DATA_SUCCESS,
+		payload,
+	};
 };
 
 const getDataFailure = () => {
-  return {
-    type: GET_DATA_FAILURE,
-  };
+	return {
+		type: GET_DATA_FAILURE,
+	};
 };
 
 const fetchData = (params) => (dispatch) => {
-  dispatch(getDataRequest());
-  axios
-    .get(
-      "https://toi-database.herokuapp.com/general_business_news",{
-        params:{
-          _limit:1
-        }
-      }
-    )
-    .then((res) => {
-      const getDataSuccessAction = getDataSuccess(res.data);
-      //  console.log(res.data)
-      dispatch(getDataSuccessAction);
-    })
-    .catch((err) => {
-      dispatch(getDataFailure());
-    });
+	dispatch(getDataRequest());
+	axios
+		.get('https://vishal-s-json-server.herokuapp.com/general_business_news', {
+			params: {
+				_limit: 1,
+			},
+		})
+		.then((res) => {
+			const getDataSuccessAction = getDataSuccess(res.data);
+			//  console.log(res.data)
+			dispatch(getDataSuccessAction);
+		})
+		.catch((err) => {
+			dispatch(getDataFailure());
+		});
 };
 
 export { fetchData };

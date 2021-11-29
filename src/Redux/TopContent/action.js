@@ -27,12 +27,10 @@ const getDataFailure = () => {
 const fetchData = (params) => (dispatch) => {
 	dispatch(getDataRequest());
 	axios
-		.get(
-			'https://toi-database.herokuapp.com/top_news'
-		)
+		.get('https://vishal-s-json-server.herokuapp.com/top_news')
 		.then((res) => {
 			const getDataSuccessAction = getDataSuccess(res.data);
-			
+
 			dispatch(getDataSuccessAction);
 		})
 		.catch((err) => {

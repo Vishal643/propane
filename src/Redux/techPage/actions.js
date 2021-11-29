@@ -22,7 +22,7 @@ const getTechNewsFailure = () => ({
 const getTechNews = (endPoint) => (dispatch) => {
 	dispatch(getTechNewsRequest());
 	return axios
-		.get(`https://toi-database.herokuapp.com/${endPoint}`)
+		.get(`https://vishal-s-json-server.herokuapp.com/${endPoint}`)
 		.then((res) => {
 			dispatch(getTechNewsSuccess(res.data));
 		})
@@ -55,7 +55,7 @@ const getIndivisualNewsDataFailure = () => {
 const getIndivisualNewsData = (endPoint, id) => (dispatch) => {
 	dispatch(getIndivisualNewsDataRequest());
 	axios
-		.get(`https://toi-database.herokuapp.com/${endPoint}/${id}`)
+		.get(`https://vishal-s-json-server.herokuapp.com/${endPoint}/${id}`)
 		.then((res) => {
 			const getDataSuccessAction = getIndivisualNewsDataSuccess(res.data);
 			console.log(res.data);
